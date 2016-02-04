@@ -30,7 +30,7 @@ public class MenuBridge {
 			List<Rom> roms = consoleService.findConsoleRoms(consoleName);
 			
 			for (Rom rom : roms) {
-				String gameLineFile = FileMsgGenerator.generateStringFromFile("resources/html/search_game_line.html");
+				String gameLineFile = FileMsgGenerator.generateStringFromFile("resources/html/search-game-line.html");
 				gameLineFile = gameLineFile.replaceAll("\t", "");
 				gameLineFile = gameLineFile.replaceAll("\r", "");
 				gameLineFile = gameLineFile.replaceAll("\n", "");
@@ -38,7 +38,7 @@ public class MenuBridge {
 				gameLineFile = gameLineFile.replaceAll("%CONSOLE_ICON%", rom.getConsole().getIcon());			
 				gameLineFile = gameLineFile.replaceAll("%ROM_TYPE%", "");
 				gameLineFile = gameLineFile.replaceAll("%ROM_DATE%", "");
-				gameLineFile = gameLineFile.replaceAll("%CONSOLE_CLASS%", rom.getConsole().getName().replaceAll(" ", "_"));
+				gameLineFile = gameLineFile.replaceAll("%CONSOLE_CLASS%", rom.getConsole().getName());
 				gameLineFile = gameLineFile.replaceAll("%FLAG_ICON%", "flag_eu.png");				
 				
 				
