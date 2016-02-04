@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Test</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/game-search.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="libs/bootstrap.min.js"></script>
+
+
+<link href="css/dock.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="dock" id="dock" style="z-index: 10">		
+            <div class="dock-container">            	                                
+                <a class="dock-item" href="#" onclick="java.changePage('search', 'NES');"><img src="images/consoles/NES.png" alt="home"><span></span></a>
+                <a class="dock-item" href="#" onclick="java.changePage('search', 'SUPER NINTENDO');"><img src="images/consoles/SNES.png" alt="home"><span></span></a>
+                <a class="dock-item" href="#" onclick="java.changePage('search', 'GAMEBOY');"><img src="images/consoles/GAMEBOY.png" alt="contact"><span></span></a>
+                <a class="dock-item" href="#" onclick="java.changePage('search','');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a>
+                <a class="dock-item" href="#" onclick="java.changePage('search','');"><img src="images/consoles/atari_2600.png" alt="home"><span></span></a>               
+                <a class="dock-item" href="#" onclick="java.changePage('search','');"><img src="images/consoles/neogeo.png" alt="home"><span></span></a>
+                <a class="dock-item" href="#"></a>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/iutil.js"></script>
+        <script type="text/javascript" src="js/fisheye.js"></script>
+        <script type="text/javascript">
+            $(document).ready(
+            function()
+            {
+                $('#dock').Fisheye(
+                {
+                    maxWidth: 60,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.dock-container',
+                    itemWidth: 60,
+                    proximity: 90,
+                    halign : 'center'
+                }
+            )
+            }
+        );
+        </script>
+	
+	<div class="col-sm-12" style="margin-top:10px">
+		<div id="mainView">BONJOUR ET BIENVENUE</div>
+
+	</div>
+
+
+</body>
+</html>

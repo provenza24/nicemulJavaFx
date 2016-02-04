@@ -1,0 +1,184 @@
+body {
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #ffffff url(../img/main-bg.gif);
+	padding: 0;
+	margin: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #3F51B5;
+    margin: 1em 0;
+    padding: 0; 
+    /*margin-top:5px;*/
+	margin-bottom:5px;
+}
+
+/**************************************/
+/* SCROLLBAR                          */
+/**************************************/ 
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(63,81,181,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(63,81,18,0.4); 
+}
+
+.jumbotron{
+    background: url("../images/logo.png") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-bottom:0px;
+	height:167px;
+}
+
+/**************************************/
+/* PANEL                              */
+/**************************************/ 
+
+.panel-primary {	
+	border-color: #3F51B5;
+}
+
+.panel-primary>.panel-heading {
+	background-color: #3F51B5;
+	border-color: #3F51B5;
+}
+
+.panel-primary>.panel-body {
+	/*background-color: #EAEFFF;*/
+	background-color: #FFF;
+} 
+
+/**************************************/
+/* NAVBAR                             */
+/**************************************/ 
+.navbar-default {
+  background-color: #303F9F;
+  border-color: #303F9F;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #c2e1f2;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #c2e1f2;
+  background-color : #1f5b83;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #337ab7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #c2e1f2;
+  background-color: #1f5b83;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #337ab7;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #c2e1f2;
+  background-color: #1f5b83;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #c2e1f2;
+  background-color: #1f5b83;
+}
+.navbar-default .navbar-toggle {
+  border-color: #1f5b83;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #1f5b83;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #c2e1f2;
+}
+
+/**************************************/
+/* ICONS                              */
+/**************************************/ 
+
+
+.NES_ICONE {
+	background-image:url(../images/consoles/nes.png);
+}
+
+.SNES_ICONE {
+	background-image:url(../images/consoles/snes.png);
+}
+
+.MEGADRIVE_ICONE {
+	background-image:url(../images/consoles/megadrive.png);
+}
+
+.AMIGA_ICONE {
+	background-image:url(../images/consoles/amiga.png);
+}
+
+.PC_ICONE {
+	background-image:url(../images/consoles/pc.png);
+}
+
+.GAMEBOY_ICONE {
+	background-image:url(../images/consoles/gameboy.png);
+}
+
+.NEOGEO_ICONE {
+	background-image:url(../images/consoles/neogeo.png);
+}
+
+.ATARI_ST_ICONE {
+	background-image:url(../images/consoles/atari.png);
+}
+
+.ATARI_2600_ICONE {
+	background-image:url(../images/consoles/atari_2600.png);
+}
+
+.GAMEBOY_ADVANCE_ICONE {
+	background-image:url(../images/consoles/advance.png);
+}
+

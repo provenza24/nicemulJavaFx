@@ -1,0 +1,112 @@
+/**************************************/
+/* FONTS                              */
+/**************************************/ 
+
+@font-face { 
+  font-family: DCDragonfire-Reg;     
+  src: url('../font/DCDragonfire-Reg.ttf');	   
+  src: local(DCDragonfire-Reg), url("../font/DCDragonfire-Reg.ttf");
+}
+
+@font-face { 
+  font-family: BD_Cartoon_Shout;     
+  src: url('../font/BD_Cartoon_Shout.ttf');	   
+  src: local(BD_Cartoon_Shout), url("../font/BD_Cartoon_Shout.ttf");
+}
+
+@font-face { 
+  font-family: Early_GameBoy;     
+  src: url('../font/Early GameBoy.ttf');	
+  src: local(Early_GameBoy), url("../font/Early GameBoy.ttf");  
+}
+
+
+@font-face { 
+  font-family: SEGA;     
+  src: url('../font/SEGA.TTF');	   
+  src: local(SEGA), url("../font/SEGA.TTF");  
+}
+
+@font-face { 
+  font-family: agency_fb;     
+  src: url('../font/agency_fb.ttf');
+  src: local(agency_fb), url("../font/agency_fb.ttf");  
+}
+
+@font-face { 
+  font-family: SF_Automaton_Bold;     
+  src: url('../font/SF Automaton Bold.ttf');	   
+  src: local(SF_Automaton_Bold), url("../font/SF Automaton Bold.ttf");  
+}
+
+@font-face { 
+  font-family: AtariST8x16SystemFont;     
+  src: url('../font/AtariST8x16SystemFont.ttf');	   
+  src: local(AtariST8x16SystemFont), url("../font/AtariST8x16SystemFont.ttf");  
+}
+
+@font-face { 
+  font-family: amiga4ever;     
+  src: url('../font/amiga4ever.ttf');	   
+  src: local(amiga4ever), url("../font/amiga4ever.ttf");  
+}
+
+@font-face { 
+  font-family: Neov2;     
+  src: url('../font/Neov2.ttf');	   
+  src: local(Neov2), url("../font/Neov2.ttf");
+}
+
+@font-face { 
+  font-family: GameCube;     
+  src: url('../font/GameCube.ttf');	   
+  src: local(GameCube.ttf), url("../font/GameCube.ttf");
+}
+
+.SUPER_NINTENDO {
+	font: italic normal 160% 'agency_fb', arial, sans-serif;
+	color: red;
+}
+
+.NES {
+	font: normal 140% 'SF_Automaton_Bold', arial, sans-serif;
+}
+
+.PC {	
+	font-family: 'Droid Serif', serif; font-size: 22px;
+}
+
+.MEGADRIVE {
+	font: normal 140% 'SEGA', arial, sans-serif;
+	color: blue;
+}
+
+.ATARI_ST {
+	font: normal 150% 'AtariST8x16SystemFont', arial, sans-serif;
+	color: black;
+}
+
+.ATARI_2600 {
+	font: normal 150% 'DCDragonfire-Reg', arial, sans-serif;
+	color: black;
+}
+
+.AMIGA {
+	font: normal 100% 'amiga4ever', arial, sans-serif;
+	color: black;
+}
+
+.GAMEBOY {
+	font: normal 100% 'Early_GameBoy', arial, sans-serif;
+	color: grey;
+}
+
+.NEOGEO {
+	font: normal 150% 'Neov2', arial, sans-serif;
+	color: black;
+}
+
+.GAMEBOY_ADVANCE {
+	font: normal 100% 'GameCube', arial, sans-serif;
+	color: blue;
+}
