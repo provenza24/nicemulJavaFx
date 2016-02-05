@@ -24,7 +24,7 @@ public class MenuBridge {
 			viewFile = viewFile.replaceAll("\t", "");
 			viewFile = viewFile.replaceAll("\r", "");
 			viewFile = viewFile.replaceAll("\n", "");							
-			
+														
 			String htmlRomList = "";
 			IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
 			List<Rom> roms = consoleService.findConsoleRoms(consoleName);

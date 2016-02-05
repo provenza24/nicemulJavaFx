@@ -154,7 +154,7 @@
  * Common modifiers for left/right menus.
  */
 .c-menu--slide-left,
-.c-menu--slide-right,
+.c-menu--slide-right-search,
 .c-menu--push-left,
 .c-menu--push-right {
   width: 100%;
@@ -163,7 +163,7 @@
 }
 @media all and (min-width: 320px) {
   .c-menu--slide-left,
-  .c-menu--slide-right,
+  .c-menu--slide-right-search,
   .c-menu--push-left,
   .c-menu--push-right {
     width: 300px;
@@ -171,7 +171,7 @@
 }
 
 .c-menu--slide-left .c-menu__item,
-.c-menu--slide-right .c-menu__item,
+.c-menu--slide-right-search .c-menu__item,
 .c-menu--push-left .c-menu__item,
 .c-menu--push-right .c-menu__item {
   display: block;
@@ -180,20 +180,20 @@
   border-bottom: solid 1px #3184a1;
 }
 .c-menu--slide-left .c-menu__item:first-child,
-.c-menu--slide-right .c-menu__item:first-child,
+.c-menu--slide-right-search .c-menu__item:first-child,
 .c-menu--push-left .c-menu__item:first-child,
 .c-menu--push-right .c-menu__item:first-child {
   border-top: none;
 }
 .c-menu--slide-left .c-menu__item:last-child,
-.c-menu--slide-right .c-menu__item:last-child,
+.c-menu--slide-right-search .c-menu__item:last-child,
 .c-menu--push-left .c-menu__item:last-child,
 .c-menu--push-right .c-menu__item:last-child {
   border-bottom: none;
 }
 
 .c-menu--slide-left .c-menu__link,
-.c-menu--slide-right .c-menu__link,
+.c-menu--slide-right-search .c-menu__link,
 .c-menu--push-left .c-menu__link,
 .c-menu--push-right .c-menu__link {
   display: block;
@@ -202,7 +202,7 @@
 }
 
 .c-menu--slide-left .c-menu__close,
-.c-menu--slide-right .c-menu__close,
+.c-menu--slide-right-search .c-menu__close,
 .c-menu--push-left .c-menu__close,
 .c-menu--push-right .c-menu__close {
   display: block;
@@ -240,7 +240,7 @@
 /**
  * Slide/Push Menu Right.
  */
-.c-menu--slide-right,
+.c-menu--slide-right-search,
 .c-menu--push-right {
   top: 0;
   right: 0;
@@ -249,7 +249,7 @@
           transform: translateX(100%);
 }
 @media all and (min-width: 320px) {
-  .c-menu--slide-right,
+  .c-menu--slide-right-search,
   .c-menu--push-right {
     -webkit-transform: translateX(300px);
         -ms-transform: translateX(300px);
@@ -257,7 +257,7 @@
   }
 }
 
-.c-menu--slide-right.is-active,
+.c-menu--slide-right-search.is-active,
 .c-menu--push-right.is-active {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);

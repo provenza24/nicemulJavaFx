@@ -43,11 +43,11 @@ hr {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(63,81,181,0.8); 
+    background: rgba(90,113,209,0.8); 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(63,81,18,0.4); 
+	background: rgba(90,113,209,0.4); 
 }
 
 .jumbotron{
@@ -65,12 +65,12 @@ hr {
 /**************************************/ 
 
 .panel-primary {	
-	border-color: #3F51B5;
+	border-color: #5A71D1;
 }
 
 .panel-primary>.panel-heading {
-	background-color: #3F51B5;
-	border-color: #3F51B5;
+	background-color: #5A71D1;
+	border-color: #5A71D1;
 }
 
 .panel-primary>.panel-body {

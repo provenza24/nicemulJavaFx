@@ -20,44 +20,32 @@
 
 	<div class="dock" id="dock" style="z-index: 10">
 		<div class="dock-container">
-			<a class="dock-item" href="#" onclick="java.changePage('search', 'NES');"><img src="images/consoles/NES.png" alt="home"><span></span></a> <a class="dock-item" href="#"
-				onclick="java.changePage('search', 'SUPER_NINTENDO');"><img src="images/consoles/SNES.png" alt="home"><span></span></a> <a class="dock-item" href="#"
-				onclick="java.changePage('search', 'GAMEBOY');"><img src="images/consoles/GAMEBOY.png" alt="contact"><span></span></a> <a class="dock-item" href="#"
-				onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a> <a class="dock-item" href="#"
-				onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a> <a class="dock-item" href="#" href="#" id="c-button--slide-right"><img
-				src="images/icones/recherche-icone-8385-32.png" alt="home"><span></span></a> <a class="dock-item" href="#" id="c-button--push-right"><img src="images/icones/recherche-icone-8385-32.png"
-				alt="home"><span></span></a>
+			<a class="dock-item" href="#" onclick="java.changePage('search', 'NES');"><img src="images/menu/NES.png" alt="home"><span></span></a>
+			<a class="dock-item" href="#" onclick="java.changePage('search', 'SUPER_NINTENDO');"><img src="images/menu/SNES.png" alt="home"><span></span></a> 
+			<a class="dock-item" href="#" onclick="java.changePage('search', 'GAMEBOY');"><img src="images/menu/GAMEBOY.png" alt="contact"><span></span></a> 
+			<a class="dock-item" href="#" onclick="java.changePage('search','MEGADRIVE');"><img src="images/menu/MEGADRIVE.png" alt="home"><span></span></a> 
+			<a class="dock-item" href="#"><span></span></a>
+			<a class="dock-item" href="#"><span></span></a> 
+			<a class="dock-item" href="#"><span></span></a>			
+			<a class="dock-item" href="#" href="#"><img src="images/icones/home.png" alt="home"><span></span></a> 
+			<a class="dock-item" href="#" id="c-button--slide-right-search"><img src="images/icones/search.png" alt="home"><span></span></a>
+			<a class="dock-item" href="#" href="#"><img src="images/icones/config.png" alt="home"><span></span></a>
+			
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-	<script type="text/javascript" src="js/iutil.js"></script>
-	<script type="text/javascript" src="js/fisheye.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#dock').Fisheye({
-				maxWidth : 60,
-				items : 'a',
-				itemsText : 'span',
-				container : '.dock-container',
-				itemWidth : 60,
-				proximity : 90,
-				halign : 'center'
-			})
-		});
-	</script>
-
-
-
-
-	<div class="col-sm-12" style="margin-top: 10px">
+	<div class="col-sm-12" style="margin-top: 20px">
 		<div id="o-wrapper" class="o-wrapper">
 
 			<main class="o-content">
 
 				<div class="o-container">
 	
-					<div id="mainView">BONJOUR ET BIENVENUE</div>
+					<div id="mainView">
+					
+					<div class="container-fluid">
+					Bonjour
+					</div>
 	
 				</div>
 			</main>
@@ -65,7 +53,7 @@
 		</div>
 		<!-- /o-wrapper -->
 
-		<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+		<nav id="c-menu--slide-right-search" class="c-menu c-menu--slide-right-search">
 		<button class="c-menu__close">Close Menu &rarr;</button>
 
 		<form role="form" name="gameSearchForm">
@@ -93,7 +81,7 @@
 		</form>
 
 		</nav>
-		<!-- /c-menu slide-right -->
+		<!-- /c-menu slide-right-search -->
 
 		<nav id="c-menu--push-right" class="c-menu c-menu--push-right">
 		<button class="c-menu__close">Close Menu &rarr;</button>
@@ -112,24 +100,42 @@
 
 	</div>
 
-	<!-- menus script -->
+	<!-- DOCK MENU -->
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/iutil.js"></script>
+	<script type="text/javascript" src="js/fisheye.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#dock').Fisheye({
+				maxWidth : 60,
+				items : 'a',
+				itemsText : 'span',
+				container : '.dock-container',
+				itemWidth : 60,
+				proximity : 90,
+				halign : 'center'
+			})
+		});
+	</script>
+
+	<!-- LEFT SLIDING MENUS -->
 	<script src="js/dist/menu.js"></script>
 	<script>
 		/**
 		 * Slide right instantiation and action.
 		 */
-		var slideRight = new Menu({
+		var slideRightSearch = new Menu({
 			wrapper : '#o-wrapper',
-			type : 'slide-right',
+			type : 'slide-right-search',
 			menuOpenerClass : '.c-button',
 			maskId : '#c-mask'
 		});
 
-		var slideRightBtn = document.querySelector('#c-button--slide-right');
+		var slideRightSearchBtn = document.querySelector('#c-button--slide-right-search');
 
-		slideRightBtn.addEventListener('click', function(e) {
+		slideRightSearchBtn.addEventListener('click', function(e) {
 			e.preventDefault;
-			slideRight.open();
+			slideRightSearch.open();
 		});
 
 		/**
