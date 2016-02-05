@@ -9,184 +9,146 @@
 <link href="css/dock.css" rel="stylesheet" type="text/css">
 <script src="libs/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="js/modernizr.custom.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/menu.css">
 
 </head>
 
-<body class="cbp-spmenu-push">
-	
-	
-	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<a href="#">Celery seakale</a>
-			<a href="#">Dulse daikon</a>
-			<a href="#">Zucchini garlic</a>
-			<a href="#">Catsear azuki bean</a>
-			<a href="#">Dandelion bunya</a>
-			<a href="#">Rutabaga</a>
-			<a id="hideRightPush">Réinitialiser</a>
-		</nav>
-		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-			<h3>RECHERCHE</h3>
-			<form style="margin-top:30px;" role="form" name="gameSearchForm">														
-						<div class="gamesearchform">							
-							<select>
-								<option value="">-- Tous les genres --</option>
-								<option value="">-- PLATEFORME --</option>
-								<option value="">-- COURSE --</option>								
-							</select>							
-							<br/>							
-							<select>
-								<option value="">-- Toutes les consoles --</option>
-								<option value="">-- NES --</option>
-								<option value="">-- SUPER NINTENDO --</option>
-								<option value="">-- MEGADRIVE --</option>
-							</select>											
-							<br/>							
-							<input type="text" placeholder="Filtre par titre" autofocus>									
-							<br/>							
-							<input type="text" placeholder="Filtre par ann�e" autofocus>									
-							<br/>							
-							<input placeholder="Filtre par �diteur / d�veloppeur" autofocus>															
-							<br/>							
-							<button ng-click="searchGames(filter, true)" class="btn btn-primary">Chercher</button>														
-							<button class="btn btn-warning">R�initialiser</button>							
-							
-							<a id="hideRightPush2">Réinitialiser</a>
-						</div>		
-					</form>
-		</nav>
-			
-	<div id="header"></div> 
-	
-	<div class="dock" id="dock" style="z-index: 10">		
-            <div class="dock-container">            	                                            	                
-                <a class="dock-item" href="#" onclick="java.changePage('search', 'NES');"><img src="images/consoles/NES.png" alt="home"><span></span></a>
-                <a class="dock-item" href="#" onclick="java.changePage('search', 'SUPER_NINTENDO');"><img src="images/consoles/SNES.png" alt="home"><span></span></a>
-                <a class="dock-item" href="#" onclick="java.changePage('search', 'GAMEBOY');"><img src="images/consoles/GAMEBOY.png" alt="contact"><span></span></a>
-                <a class="dock-item" href="#" onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a>
-                <a class="dock-item" href="#" onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a>
-                <a class="dock-item" href="#" onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a>
-                <a class="dock-item" href="#"><span></span></a>
-                <a id="showRightPush" class="dock-item" href="#"><img src="images/icones/recherche-icone-8385-32.png" alt="home"><span></span></a>
-                <a id="showRightPush2" class="dock-item" href="#"><img src="images/icones/recherche-icone-8385-32.png" alt="home"><span></span></a>                                                                                                                         
-            </div>
-        </div>
-        
-        <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script-->        
-        <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-        <script type="text/javascript" src="js/iutil.js"></script>
-        <script type="text/javascript" src="js/fisheye.js"></script>
-        <script type="text/javascript">
-            $(document).ready(
-            function()
-            {
-                $('#dock').Fisheye(
-                {
-                    maxWidth: 60,
-                    items: 'a',
-                    itemsText: 'span',
-                    container: '.dock-container',
-                    itemWidth: 60,
-                    proximity: 90,
-                    halign : 'center'
-                }
-            )
-            }
-        );
-        </script>       		
-			
-			    <script src="js/classie.js"></script>
-		<script>
-			var menuRight2 = document.getElementById( 'cbp-spmenu-s2' ),
-				menuRight = document.getElementById( 'cbp-spmenu-s1' ),
-								
-				showRightPush = document.getElementById( 'showRightPush' ),
-				hideRightPush = document.getElementById( 'hideRightPush' ),
-				
-				showRightPush2 = document.getElementById( 'showRightPush2' ),				
-				hideRightPush2 = document.getElementById( 'hideRightPush2' ),
-				
-				body = document.body;
+<body>
 
-			/*showLeft.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeft' );
-			};
-			showRight.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( menuRight, 'cbp-spmenu-open' );
-				disableOther( 'showRight' );
-			};
-			showTop.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( menuTop, 'cbp-spmenu-open' );
-				disableOther( 'showTop' );
-			};
-			showBottom.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( menuBottom, 'cbp-spmenu-open' );
-				disableOther( 'showBottom' );
-			};
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};*/
-			showRightPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toleft' );
-				classie.toggle( menuRight, 'cbp-spmenu-open' );
-				disableOther( 'showRightPush' );
-			};
-			hideRightPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toleft' );
-				classie.toggle( menuRight, 'cbp-spmenu-open' );
-				disableOther( 'showRightPush' );
-			};
-			showRightPush2.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toleft' );
-				classie.toggle( menuRight2, 'cbp-spmenu-open' );
-				disableOther( 'showRightPush' );
-			};
-			hideRightPush2.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toleft' );
-				classie.toggle( menuRight2, 'cbp-spmenu-open' );
-				disableOther( 'showRightPush2' );
-			};
+	<div id="header"></div>
 
-			function disableOther( button ) {
-				if( button !== 'showLeft' ) {
-					classie.toggle( showLeft, 'disabled' );
-				}
-				if( button !== 'showRight' ) {
-					classie.toggle( showRight, 'disabled' );
-				}
-				if( button !== 'showTop' ) {
-					classie.toggle( showTop, 'disabled' );
-				}
-				if( button !== 'showBottom' ) {
-					classie.toggle( showBottom, 'disabled' );
-				}
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-				if( button !== 'showRightPush' ) {
-					classie.toggle( showRightPush, 'disabled' );
-				}
-			}
-		</script>
-	
-	<div class="col-sm-12" style="margin-top:10px">
-		<div id="mainView">BONJOUR ET BIENVENUE</div>
+	<div class="dock" id="dock" style="z-index: 10">
+		<div class="dock-container">
+			<a class="dock-item" href="#" onclick="java.changePage('search', 'NES');"><img src="images/consoles/NES.png" alt="home"><span></span></a> <a class="dock-item" href="#"
+				onclick="java.changePage('search', 'SUPER_NINTENDO');"><img src="images/consoles/SNES.png" alt="home"><span></span></a> <a class="dock-item" href="#"
+				onclick="java.changePage('search', 'GAMEBOY');"><img src="images/consoles/GAMEBOY.png" alt="contact"><span></span></a> <a class="dock-item" href="#"
+				onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a> <a class="dock-item" href="#"
+				onclick="java.changePage('search','MEGADRIVE');"><img src="images/consoles/MEGADRIVE.png" alt="home"><span></span></a> <a class="dock-item" href="#" href="#" id="c-button--slide-right"><img
+				src="images/icones/recherche-icone-8385-32.png" alt="home"><span></span></a> <a class="dock-item" href="#" id="c-button--push-right"><img src="images/icones/recherche-icone-8385-32.png"
+				alt="home"><span></span></a>
+		</div>
 	</div>
 
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/iutil.js"></script>
+	<script type="text/javascript" src="js/fisheye.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#dock').Fisheye({
+				maxWidth : 60,
+				items : 'a',
+				itemsText : 'span',
+				container : '.dock-container',
+				itemWidth : 60,
+				proximity : 90,
+				halign : 'center'
+			})
+		});
+	</script>
+
+
+
+
+	<div class="col-sm-12" style="margin-top: 10px">
+		<div id="o-wrapper" class="o-wrapper">
+
+			<main class="o-content">
+
+				<div class="o-container">
+	
+					<div id="mainView">BONJOUR ET BIENVENUE</div>
+	
+				</div>
+			</main>
+			
+		</div>
+		<!-- /o-wrapper -->
+
+		<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+		<button class="c-menu__close">Close Menu &rarr;</button>
+
+		<form role="form" name="gameSearchForm">
+
+			<div class="gamesearchform">
+
+				<select>
+					<option value="">-- Tous les genres --</option>
+				</select> <br /> <select ng-model="filter.console" ng-options="console.name for console in consoles" data-image="images/consoles/{{console.background}}" ng-change="searchGames(filter, true)">
+					<option value="">-- Toutes les consoles --</option>
+				</select> <br /> <input ng-model="filter.title" type="text" placeholder="Filtre par titre" autofocus> <br /> <input class="hidden-xs" ng-model="filter.year" type="text"
+					placeholder="Filtre par année" autofocus> <br /> <input class="hidden-xs" ng-model="filter.other" type="text" placeholder="Filtre par éditeur / développeur" autofocus>
+
+				<!--br/>
+							
+							<input ng-model="filter.developer" type="text" placeholder="Filtre par développeur" autofocus-->
+
+				<br />
+
+				<button ng-click="searchGames(filter, true)" class="btn btn-primary">Chercher</button>
+
+				<button ng-click="initFilter()" class="btn btn-warning">Réinitialiser</button>
+
+			</div>
+		</form>
+
+		</nav>
+		<!-- /c-menu slide-right -->
+
+		<nav id="c-menu--push-right" class="c-menu c-menu--push-right">
+		<button class="c-menu__close">Close Menu &rarr;</button>
+		<ul class="c-menu__items">
+			<li class="c-menu__item"><a href="#" class="c-menu__link">Home</a></li>
+			<li class="c-menu__item"><a href="#" class="c-menu__link">About</a></li>
+			<li class="c-menu__item"><a href="#" class="c-menu__link">Services</a></li>
+			<li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
+			<li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
+		</ul>
+		</nav>
+		<!-- /c-menu push-right -->
+
+		<div id="c-mask" class="c-mask"></div>
+		<!-- /c-mask -->
+
+	</div>
+
+	<!-- menus script -->
+	<script src="js/dist/menu.js"></script>
+	<script>
+		/**
+		 * Slide right instantiation and action.
+		 */
+		var slideRight = new Menu({
+			wrapper : '#o-wrapper',
+			type : 'slide-right',
+			menuOpenerClass : '.c-button',
+			maskId : '#c-mask'
+		});
+
+		var slideRightBtn = document.querySelector('#c-button--slide-right');
+
+		slideRightBtn.addEventListener('click', function(e) {
+			e.preventDefault;
+			slideRight.open();
+		});
+
+		/**
+		 * Push right instantiation and action.
+		 */
+		var pushRight = new Menu({
+			wrapper : '#o-wrapper',
+			type : 'push-right',
+			menuOpenerClass : '.c-button',
+			maskId : '#c-mask'
+		});
+
+		var pushRightBtn = document.querySelector('#c-button--push-right');
+
+		pushRightBtn.addEventListener('click', function(e) {
+			e.preventDefault;
+			pushRight.open();
+		});
+	</script>
 
 </body>
 </html>
