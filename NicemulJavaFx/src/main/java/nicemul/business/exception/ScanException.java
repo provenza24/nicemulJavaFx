@@ -6,7 +6,7 @@ public class ScanException extends RollbackException {
 
     public static final String MISSING_CONSOLE_NAME = "Missing parent console name";
     
-    public static final String MISSING_LOGO = "Missing logo";
+    public static final String MISSING_ICON = "Missing icon";
 
     public static final String MISSING_FOLDER = "Missing folder";
 

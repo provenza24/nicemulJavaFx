@@ -8,6 +8,8 @@ import nicemul.business.model.Rom;
 
 public interface IConsoleService {
 	
+	public String findConsoleMiniIcon(String consoleName) throws BusinessException;
+	
 	public void scanConsoles() throws BusinessException;
 	
 	public void scanAllRoms() throws BusinessException;

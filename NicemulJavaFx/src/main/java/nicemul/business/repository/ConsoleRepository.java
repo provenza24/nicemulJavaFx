@@ -15,4 +15,6 @@ public interface ConsoleRepository extends JpaRepository<Console, Long> {
 	@Query("select console.roms from Console console where console.name=?1")
 	public List<Rom> findRoms(String consoleName);
 	
+	@Query("select console.miniIcon from Console console where console.name=?1")
+	public String findMiniIcon(String consoleName);
 }

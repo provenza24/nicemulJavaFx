@@ -34,6 +34,10 @@ public class ConsoleService implements IConsoleService {
 		return consoleRepository.findRoms(consoleName);
 	}
 	
+	public String findConsoleMiniIcon(String consoleName) throws BusinessException {
+		return consoleRepository.findMiniIcon(consoleName);
+	}
+	
 	public void scanConsoles() throws BusinessException {
 
 		String[] consolesFolders = new File(Folders.CONSOLES_DESCRIPTION_FOLDER).list();
@@ -65,9 +69,19 @@ public class ConsoleService implements IConsoleService {
 		String constructor = prop.getProperty("constructor");
 		console.setConstructor(StringUtils.isNotBlank(constructor) ? constructor.toUpperCase() : "ZUNKNOW");
 
-		console.setIcon(prop.getProperty("logo"));
+		console.setDockIcon(prop.getProperty("dockIcon"));
+		if (StringUtils.isEmpty(console.getDockIcon())) {
+			throw new ScanException(ScanException.MISSING_ICON);
+		}
+		
+		console.setIcon(prop.getProperty("icon"));
 		if (StringUtils.isEmpty(console.getIcon())) {
-			throw new ScanException(ScanException.MISSING_LOGO);
+			throw new ScanException(ScanException.MISSING_ICON);
+		}
+		
+		console.setMiniIcon(prop.getProperty("miniIcon"));
+		if (StringUtils.isEmpty(console.getMiniIcon())) {
+			throw new ScanException(ScanException.MISSING_ICON);
 		}
 
 		console.setRomsExtensions(prop.getProperty("supportedRomExtensions"));

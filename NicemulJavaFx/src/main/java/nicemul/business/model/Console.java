@@ -44,8 +44,14 @@ public class Console implements Serializable {
 	@Column(name = "ROMS_EXTENSIONS")
 	private String romsExtensions;
 
+	@Column(name = "DOCK_ICON")
+	private String dockIcon;
+	
 	@Column(name = "ICON")
 	private String icon;
+	
+	@Column(name = "MINI_ICON")
+	private String miniIcon;
 
 	@OneToMany(cascade = {CascadeType.ALL}, mappedBy = "console", orphanRemoval=true)
 	public List<Rom> roms;
@@ -142,6 +148,22 @@ public class Console implements Serializable {
 		roms.add(rom);
 		rom.setConsole(this);
 		return true;
+	}
+
+	public String getDockIcon() {
+		return dockIcon;
+	}
+
+	public void setDockIcon(String dockIcon) {
+		this.dockIcon = dockIcon;
+	}
+
+	public String getMiniIcon() {
+		return miniIcon;
+	}
+
+	public void setMiniIcon(String miniIcon) {
+		this.miniIcon = miniIcon;
 	}
 	
 }

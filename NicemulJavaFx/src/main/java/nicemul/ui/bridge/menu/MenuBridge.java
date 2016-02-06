@@ -3,6 +3,8 @@ package nicemul.ui.bridge.menu;
 import java.io.File;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
 import javafx.scene.web.WebEngine;
 import nicemul.business.model.Rom;
 import nicemul.business.service.console.IConsoleService;
@@ -19,14 +21,20 @@ public class MenuBridge {
 	
     public void changePage(String page, String consoleName) {
     	    	
+    	IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
+    	
 		try {
 			String viewFile = FileMsgGenerator.generateStringFromFile("resources/html/"+page+".html");			
 			viewFile = viewFile.replaceAll("\t", "");
 			viewFile = viewFile.replaceAll("\r", "");
 			viewFile = viewFile.replaceAll("\n", "");							
-														
+						
+			if (StringUtils.isNotBlank(consoleName)) {
+				viewFile = viewFile.replaceAll("%CONSOLE_ICON%", consoleService.findConsoleMiniIcon(consoleName));
+			}
+									
 			String htmlRomList = "";
-			IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
+			
 			List<Rom> roms = consoleService.findConsoleRoms(consoleName);
 			
 			for (Rom rom : roms) {
