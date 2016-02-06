@@ -1,6 +1,6 @@
 body {
 	font: 11px Arial, Helvetica, sans-serif;
-	background: #ffffff url(../img/main-bg.gif);
+	background: #ffffff url(../images/main-bg.gif);
 	padding: 0;
 	margin: 0;
 }
@@ -8,7 +8,7 @@ body {
 #header{
 	position: absolute; 
 	height:70px; 
-	background: url(../img/dock-bg2.gif);
+	background: url(../images/dock-menu/dock-bg2.gif);
 	width:100%; 
 }
 
