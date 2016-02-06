@@ -1,5 +1,5 @@
 /**************************************/
-/* FONTS                              */
+/* CONSOLES FONTS                     */
 /**************************************/ 
 
 @font-face { 
@@ -110,3 +110,15 @@
 	font: normal 100% 'GameCube', arial, sans-serif;
 	color: blue;
 }
+
+
+/**************************************/
+/* OTHER FONTS                        */
+/**************************************/ 
+
+@font-face { font-family: LLPIXEL3; src: url('../font/LLPIXEL3.ttf'); } 
+.LLPIXEL3 { 
+	font-family: LLPIXEL3, sans-serif;
+ 	font-size: 120%; 
+}
+
