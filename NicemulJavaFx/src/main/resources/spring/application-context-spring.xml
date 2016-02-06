@@ -3,11 +3,17 @@
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 		
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd	 	
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/data/repository
+	http://www.springframework.org/schema/data/repository/spring-repository.xsd
 	http://www.springframework.org/schema/data/jpa
-   	http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd">
+	http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd	
+	">
   	
   	<!-- Context access Bean -->
 	<bean id="applicationContextHolder"	class="nicemul.business.util.ApplicationContextHolder" />

@@ -6,8 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Nicemul</name>
- 	 <description>	</description>
-  	<packaging>jar</packaging>
+	<description>	</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<jdk.version>1.8</jdk.version>
+	</properties>
 
 	<dependencies>
 
@@ -126,48 +130,72 @@
 
 	</dependencies>
 
-	 <build>
-  	<resources>
-      <resource>
-        <filtering>false</filtering>
-        <directory>src/main/resources</directory>     
-      </resource>
-    </resources>
-    
-    <plugins>             
-           	   
-  		<plugin>
-    		<groupId>org.apache.maven.plugins</groupId>
-    		<artifactId>maven-shade-plugin</artifactId>
-		    <version>2.0</version>
-		    <executions>
-		      <execution>
-		        <phase>package</phase>
-		        <goals>
-		          <goal>shade</goal>
-		        </goals>
-		        <configuration>
-		          <transformers>
-		            <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-		              <resource>META-INF/spring.handlers</resource>
-		            </transformer>
-		            <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-		              <resource>META-INF/spring.schemas</resource>
-		            </transformer>
-		            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-		              <mainClass>nicemul.Launcher</mainClass>              
-		            </transformer>
-		          </transformers>
-		        </configuration>
-		      </execution>
-		    </executions>
-  		</plugin>  		  	   
-    		  
-  
-  	</plugins>
-    
-     
-  </build>
+	<build>
+		<finalName>nicemul</finalName>
+		<plugins>
 
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<!-- Set a compiler level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Make this jar executable -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+				  <excludes>
+					<exclude>**/log4j.properties</exclude>
+				  </excludes>
+				  <archive>
+				    <manifest>
+					<addClasspath>true</addClasspath>
+					<mainClass>nicemul.Launcher</mainClass>
+					<classpathPrefix>dependency-jars/</classpathPrefix>
+				    </manifest>
+				  </archive>
+				</configuration>
+			</plugin>
+
+			<!-- Copy project dependency -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+				  <execution>
+					<id>copy-dependencies</id>
+					<phase>package</phase>
+					<goals>
+						<goal>copy-dependencies</goal>
+					</goals>
+					<configuration>
+					  <!-- exclude junit, we need runtime dependency only -->
+					  <includeScope>runtime</includeScope>
+					  <outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
+					</configuration>
+				  </execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>			
 
 </project>
