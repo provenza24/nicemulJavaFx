@@ -17,6 +17,8 @@ public class PersistenceTest {
 		IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
 		consoleService.scanConsoles();							
 		consoleService.scanAllRoms();
+		consoleService.scanEmulators();
+				
 		consoleService.displayConsoles();
 		
 	}

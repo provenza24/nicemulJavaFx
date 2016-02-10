@@ -15,10 +15,11 @@ public class Launcher {
 				"spring/application-context-spring.xml"
 				,"spring/jpa-context-spring.xml"}));
 		
-		IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
+ 		IConsoleService consoleService = (IConsoleService) ApplicationContextHolder.getContext().getBean("consoleService");
 		
 		consoleService.scanConsoles();							
 		consoleService.scanAllRoms();
+		consoleService.scanEmulators();
 		
 		MainFrame mainFrame = new MainFrame();
 		mainFrame.start(args);

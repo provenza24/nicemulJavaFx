@@ -18,6 +18,10 @@ public interface IConsoleService {
 	
 	public List<Rom> findConsoleRoms(String consoleName) throws BusinessException;
 	
+	public List<Rom> findFullConsoleRoms(String consoleName) throws BusinessException;
+	
+	public void scanEmulators() throws BusinessException;
+	
 	public void displayConsoles();
 	
 }

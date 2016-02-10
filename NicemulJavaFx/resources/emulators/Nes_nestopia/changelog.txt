@@ -1,0 +1,1309 @@
+----------------------------------------------------------------
+1.40
+----------------------------------------------------------------
+
+Shell :
+
+ Ajouts :
+ 
+  - Nouvelles fonctionnalités et améliorations dans Options --> Cheats.
+  - Support du chargement/sauvegarde automatique des Cheats dans Options --> Chemins.
+  - Option "Muet"pour le son lorsque l'émulateur est lancé dans le mode "Vitesse Alernative".
+
+ Changements :
+ 
+  - Améliorations de l'Icône par Pongbashi. 
+  - Résolution par défaut du Plein Ecran dépendant de l'aspect du moniteur.
+  - Refontes.
+
+ Corrections :
+ 
+  - Divers choses mineures.
+
+Noyau :
+
+ Ajouts :
+ 
+  - Support préliminaire de la console Dendy. Corrections de Magistr (Subor) et
+    certains autres 'clone exclusifs'. Info fourni par Flamer et HardWareMan.
+  - Conflits de lecture DMC DMA. Info fourni par blargg et bunnyboy.
+  - Mapper 177, 179, 219 et 221. Info fourni par CaH4e3.
+  - Entrées dans la Base de Donnée.
+  
+ Changements :
+ 
+  - Meilleur et plus flexible implémentation de ligne d'adresse PPU.
+  - Entrées dans la Base de Donnée.
+  - Refontes.
+
+ Corrections :
+ 
+  - Palette incorrecte pendant le changement vers/à partir des images VS.
+  - Information incorrecte sur les images, par ex : batterie quand elle n'existait pas.
+  - Sauvegarde des Sauvegardes d'état ne mode NTSC/PAL.
+  - Correction mineur avec la précision des sauvegardes d'état avec l'enregistrement des cassettes.
+
+---------------------------------------------------------------
+1.39
+----------------------------------------------------------------
+
+Shell :
+
+ Ajouts :
+
+  - Boîte à cocher "Ne pas afficher de nouveau" dans les interruptions.
+  - Du patch logiciel (soft-patched) dans "Info sur l'image".
+
+ Changements :
+
+  - Messages d'erreurs plus précis. 
+  - Refontes.
+  
+ Corrections :
+ 
+  - Erreur d'ouverture d'un fichier réseau menant à un plantage.
+  - Bug sur la fermeture des fichiers récents après avoir quitté l'émulateur.
+  - Bug du répertoire fichier image (Dernièrement sauvegardé) arpès avoir quitté l'émulateur.
+  - Parfois, la touche "Esc" ne fonctionnait pas lors de la désactivation des contrôles.
+  - Plantage avec le bouton "Annuler" lors de l'export d'un fichier AVI.
+  - Hauteur de l'écran correcte avec le filtre NTSC lors de l'export vers un fichier AVI.
+  - Fautes d'orthographe dans la GUI (Interface Graphique Utilisateur).
+  
+Noyau :
+
+ Ajouts :
+ 
+  - Documentation du noyau API en HTML dans cppdoc.
+  - Support du format de patch UPS.
+  - Recherche dans la Base de Donnée du patchage logiciel.
+  - Entrées dans la Base de Donnée. Info fourni par Bootgod.
+  - Encore plus de cartes reconnues. Info fourni par Bootgod.
+
+ Changements :
+ 
+  - Sauvegardes FDS via le format UPS au lieu du format IPS. 
+  - Entrées dans la Base de Donnée. Info fourni par Bootgod.
+  - Refontes.
+
+ Corrections :
+ 
+  - Bug sur la sauvegarde de fichier FDS.
+  - Bug sur l'augmentation de burst phase NTSC.
+  - Fuite potentiel de la mémoire dans le lanceur de Base de Donnée.
+  - UTF16 vers un correctif de portabilité wchar_t avec l'analyseur XML.
+  - Bug Const-correctness pris par GCC 4.0.
+
+----------------------------------------------------------------
+1.38
+----------------------------------------------------------------
+
+Shell :
+
+ Ajouts :
+ 
+  - Option qui permet de choisir sa console préférée. Allez dans Options --> Préférences.
+
+ Changements :
+ 
+  - Certains filtres vidéo fonctionnent de manière plus fluide avec le GPU.
+  - La plupart des paramètres sont maintenant stockés dans un fichier au format XML.
+  - Propriétés d'affichage en plus dans le lanceur.
+  - Refontes.
+
+ Corrections :
+ 
+  - Communication des entrées du Réseau.
+  - Bug d'enregistrement des films lors du jeu en réseau (le menu était grisé).
+
+Noyau :
+
+ Ajouts :
+
+  - Support de la Base de Donnée externe et des sets de ROMs utilisant le nouveau format XML crée en collaboraiton avec Bootgod.    
+  - Mapper 36, 103, 104, 106, 120, 126, 175, 176, 223 et 224. Info fourni par mad dumper, CaH4e3 et Temryu.
+  - Cartes UNIF GS-2013 et BS-5. Info fourni par CaH4e3.
+  - Emulation des conflits de bus pour certaines cartes.  
+  - Entrées dans la Base de Donnée.
+
+ Changements :
+
+  - PPU power/reset timing and register states. Info fourni par blargg.
+  - Comportement divers avec les cas particulers des IRQ/NMI/BRK/DMA. Info fourni parblargg.
+  - Le basculement en NTSC/PAL pendant l'émulation forcera le redémarrage matériel.
+  - Amélioration de l'émulation de divers mapper. Info fourni par Bootgod.
+  - Compteur de la carte NES-EVENT plus précis.
+  - Noms des cartes. Info fourni par Bootgod.
+  - Refontes et révisions de la base du code des mappers.
+  - Optimisations de la vitesse ( la précision n'est pas touché !).
+  - Mappers 21, 23, 25 and 185 ne sont plus supporté lors de l'utilisation des fichiers iNes à casue d'une restrication avec ce format.
+  
+ Corrections :
+
+  - Bug MMC3 soft-reset IRQ.
+  - Entrées dans la Base de Donnée.
+
+----------------------------------------------------------------
+1.37
+----------------------------------------------------------------
+
+Shell:
+
+ Ajouts :
+  
+  - D'une option pour que les interruptions se chargent au démarrage d'un fichier.
+  - L'enregistrement d'un film est maintenant supporté pendant une partie en réseau.
+
+ Changements :
+ 
+  - Réseau - plus petits paquets de données.
+  - Ajustements mineurs dans la GUI (Interface Graphique Utilisateur).
+  - Refontes.
+ 
+ Corrections :
+ 
+  - Des artefacts du scaling avec le filtre NTSC dans certaines résolutions.
+  - Bug de redimensionnement Auto de la fenêtre en NTSC/PAL.
+  - Des soucis de sons avec les clics de la souris sous windows.
+  - Des bugs dans le réseau.
+  - Bug de calibrage auto du Joystick.
+
+Noyau :
+
+ Ajouts :
+
+  - Mapper 63.
+  - Mapper 121 et 134. Info fourni par CaH4e3.
+  - Mapper 136 pour la carte Sachen SA-002 3011. Info fourni par Enri.
+  - Mapper 178 pour le jeu "San Guo Zhong Lie Zhuan (Ch)". Info fourni par temryu.
+  - Cartes UNIF : AX5705, T-230, CTC-65 et 190IN1. Info fourni par CaH4e3.
+  - Adaptation de la synchronisation du flux sonore.
+  - Plus d'astuces d'optimisation du GCC.
+  - Entrées dans la base de donnée.
+
+ Changements :
+ 
+  - Reécriture du format du fichier Film. Les anciens fichiers ne fonctionneront plus (désolé, ca devait arriver tôt ou tard).
+    Le nouveau format est beaucoup plus flexible et extensible.
+  - Diminution de la consommation de la mémoire.    
+  - Optimisations de la vitesse de l'APU.
+  - La plupart des interruptions sont maintenant configurables.
+  - Noms des cartes. Info fourni par Pongbashi et Bootgod.
+  - Refontes.
+
+ Corrections :
+ 
+  - Mapper 41 et 43.
+  - Mapper 112. Correction du jeu "Fighting Hero III". Info fourni par temryu.
+  - Imprécisions mineurs dans les sauvegardes d'états.
+  - Imprécision dans l'émulation sonore FDS. Ce qui permet de corriger le jeu 
+    "Nazo no Magazine Disk - Nazoraa Land Dai 3 Gou".
+  - Petit bug du rembobineur.
+  - Entrées dans la base de donnée.
+
+----------------------------------------------------------------
+1.36
+----------------------------------------------------------------
+
+Shell :
+
+ Ajouts :
+ 
+  - Le calibrage du bouton du joystick dans la boîte de dialogue des contrôleurs.
+
+ Changements :
+  
+  - Il est maintenant possible de faire des sauvegardes d'états (emplacements uniquement) pendant le jeu en réseau.
+  - Certains messages d'erreurs sont plus précis.
+  - Le fichier Log (d'enregistrement) est maintenant activé par défaut.
+  - Des problèmes de chargements de certaines ressources, surtout le fichier de base de donnée du lanceur.
+  - Diverses corrections esthétiques et améliorations dans la GUI (Interface Graphique Utilisateur).
+  - Refonte.
+
+ Corrections :
+  
+  - Le déclenchement du Lightgun (Pistolet) n'est plus enregistré si l'écran est caché par une fenêtre.
+  - Diverses choses.
+
+Core :
+
+ Ajouts :
+
+  - Support du périphérique Power Glove.
+  - Mapper 38, 108 et 173. Info fourni par Ca4He3.
+  - Cartes UNIF s: TF1201, KS7038 et GS-2004. Info fourni par Ca4He3.
+  - Mapper 150 "reset-triggered DIP switch toggling".
+  - Entrées dans la base de donnée.
+
+ Changements :
+ 
+  - Optimisations de la vitesse.
+  - Mise à jour de la dll blargg's nes_ntsc qui passe en version 0.2.2.
+  - Méthode de calcul HSB/RGB. 
+  - Retrait du rendu du mode vidéo en 8 bit.
+  - Retrait des filtres 2xSaI. HQX ou ScaleX sont utilisé en lieu et place du 2xSAI.
+  - Application plus stric des normes ANSI/ISO.
+  - Plus d'options pour le compileur et détections via le préprocesseur. 
+  - Noms des cartes. Info fourni par Pongbashi.
+  - Refonte.
+
+ Corrections :
+ 
+  - Mapper 234.
+  - Mapper 242. Correction du jeu "Dragon Quest VIII (Ch)".
+  - Entrées dans la base de donnée.
+  - Diverses choses.
+
+----------------------------------------------------------------
+1.35
+----------------------------------------------------------------
+
+Shell:
+
+ Ajouts :
+
+  - Sélection de la zone mémoire pour les tampons sons.
+  - Sélection de l'adaptateur 4 joueurs Famicom et NES à partir du menu.
+  - Plus d'info dans la boîte de dialogue du fichier image.
+
+ Changements :
+ 
+  - Meilleur synchronisation du son.
+  - Correction et améliorations du lanceur.
+  - Recherche et correction de bugs dans les drivers sons E-MU.
+  - Recherche et correction de bug dans la fonction ::D3DXSaveSurfaceToFile() using D3DXIFF_BMP.
+  - Les chaînes MBC se retrouvent maintenant dans le chat.
+  - L'option "Ratio de l'aspect" est maintenant conservé avec ALT+S dans le mode Plein Ecran.
+  - La VSync (Synchro vertical) est maintenant désactivé par défaut.
+
+ Corrections :
+
+  - Les paramètres concernant la compression de la palette et les fichiers BIOS FDS sont sauvegardés lorsque vous quittez l'émulateur.
+  - AVISTREAMINFO::fccHandler.
+  - Chemins relatifs dans la boîte de dialogue "Chemins".
+
+Core :
+
+ Ajouts :
+
+  - Support préliminaire des fichiers d'en-tête NES 2.0.
+  - Support du périphérique R.O.B / Famicom Robot.
+  - Mapper 14, 196, 214 et 169 (partiellement). Info fourni par Ca4He3.
+  - Mapper 171 (KAISER KS7058) pour le jeu "Tui Do Woo Ma Jeung".
+  - Mapper 172 (IDEA-TEK CNROM +SECURITY) pour le jeu "1991 Du Ma Racing" (version non altéré).
+  - Entrées dans la base de donnée.
+
+ Changements :
+
+  - Echantillonage du canal noise PAL APU et les étapes du séquenceur d'image. Info fourni par Blargg.
+  - Calcul de l'emphase des couleurs pour les utilisateurs de palettes.
+  - Meilleur détection du type de carte pour plusieurs mappers, en particulier le 1 et le 4.
+  - Noms des cartess. Info fourni par Pongbashi.
+  - Retrait du mapper 100 (inutile).
+  - Refonte.
+
+ Corrections :
+
+  - Mapper 12 (utilise la révision du MMC3A). Corrige le jeu "Dragon Ball Z 5".
+  - Mapper 15, 147 et 222. Info fourni par CaH4e3.
+  - Mapper 99, PRG-ROM bank switching. Corrige le jeu "VS Gumshoe".
+  - Mapper 115 et déplacement du jeu "Bao Qing Tian" sur ce mapper.
+  - Mapper 156. Correction des jeux "Ko Ko Eo Deu Ben Ce" et "Metal Force".
+  - Mapper 163. Info fourni par CaH4e3 et tpu.
+  - Mapper 230. Correction du jeu "Contra" dans "22-in-1".
+  - Mapper 232. Corrections des jeux Quattro.
+  - Bouton droit de la souris pour le light gun (pistolet) lorsque le tir était hors de l'écran.
+  - Bug mineur dans le contrôle du volume sonore.
+  - Timing de l'instruction AbsX 3-byte NOP.
+  - Entrées dans la base de donnée.
+
+
+----------------------------------------------------------------
+1.34
+----------------------------------------------------------------
+
+Shell:
+
+ Changements :
+
+  - Meilleur méthode de synchronisation de l'image CPU/GPU. Désactivation lorsque
+    "triple buffering" est activé.
+  - Paramètres par défaut correspondant pour le "saut d'imaga auto", le triple buffering 
+    et l'horloge se basant sur le système.
+  - Blargg's nes_ntsc revient de nouveau avec la nouvelle version 0.2.1.
+  - AVISTREAMINFO::szName n'est plus utilisé, car il semble que cela provoque
+    des erreurs de chargement avec les éditeurs de fichier AVI.
+
+ Corrections :
+
+  - Bug du "Frame timing". Pouvait provoquer de grave ralentissement sur certains PC.
+  - Mauvaise vitesse dans les taux de rafraîchissement élevés.
+  - Les commandes des touches ne se bloquent plus.
+
+Core:
+
+ Corrections :
+
+  - "Quattro Sports: BMX Simulator" fonctionne mieux.
+
+----------------------------------------------------------------
+1.33b
+----------------------------------------------------------------
+
+Shell:
+
+ Corrections :
+
+  - Retrait de l'utilisation des événements de notifications de DirectInput8. Cela provoquait trop de problèmes et certains joyesticks refusés de fonctionner avec.
+
+----------------------------------------------------------------
+1.33
+----------------------------------------------------------------
+
+Shell:
+
+ Ajouts :
+
+  - Ajustement de la courbure de l'écran.
+  - Option de mis à l'échelle auto pour les filtres vidéo Hqx et ScaleX.
+  - Option de configuration auto de la couleur pour le filtre NTSC.
+  - Colonne 'Condition' dans le lanceur.
+  - Visualisation de l'Hex et de l'entrée en cours dans l'éditeur de palette.
+  - Manière rapide pour fournir un fichier BIOS FDS manquantsur le chargement d'une         image disque.
+  - Le bouton 'Défaut' dans la fenêtre FDS.
+  - Plus d'info dans le fichier d'enregistrement "FDS" et "info sur l'image".
+
+ Changements :
+
+  - Réduction de la latence de l'entrée et amélioration global du flux de l'image avec       la réorganisation des boucles d'attente et en utilisant les "Direct3D9 query events"     pour forcer la sync du CPU/GPU sur chaque image.
+  - Amélioration de "l'emu input granularity" en utilisant les notifications             d'événements de DirectInput8.
+    Ce qui corrige le "BMX Simulator" dans le jeu "Quattro Sports".
+  - Récupération du ::Sleep() time.
+  - Message d'avertissement à chaque fois que la base de donnée a corrigé un fichier nes     possèdant une mauvaise en-tête.
+  - Le contrôle de la liste des fichiers peut être effectué avec les doubles clics.
+  - En pressant la touche "ESC", cela devrait maintenant fermer la plupart des fenêtres.
+  - Aucune marque de vérification du menu lors de l'éjection du disque.
+  - Le timer WMM est maintenant utilisé par défaut à cause de QPF/QPC non écurisé avec       les CPU Dual-core.
+  - Refactoring.
+
+ Corrections :
+
+  - Mauvaise valeurs HSB dans l'éditeur de palette.
+  - Bug dans l'accélération de la vitesse lorsque l'option "vsync" était activé.
+  - Taille de la fenêtre incorrecte au démarrage après avoir quittez auparavant avec une     fenêtre au format PAL.
+  - Cacher auto le curseur (ne fonctionnait pas toujours).
+
+Core :
+
+ Ajouts :
+
+  - Filtre vidéo Hq4x.
+  - Support pour les palettes 512*3 byte étendues (pour l'emphase des couleurs).
+  - Ecran textes FDS pour la lecture/écriture du disque.
+  - Entrèes dans la base de donnée.
+
+ Changements :
+
+  - Meilleur conversion du RGB vers le YUV pour le système VS.
+  - Meilleur stratégie de détection du système VS.
+  - Descriptions des interruptions VS pour les jeux "Battle City", "RBI Baseball",           "Super Sky Kid" rt "Super Xevious".
+  - Optimisations du rembobineur. Plus rapide mais nécessite plus de mémoire.
+  - Emulation plus précise du lecteur disque FDS. Ce qui corrige les jeux "Aspic-Majaou      no Noroi", "Hao Kun no Fushigina Tabi" et possibly others.
+  - Changement vers Blargg's snes_ntsc pour quil puisse fonctionner avec les palettes        personnalisés.
+  - Refactoring et optimisations.
+
+ Corrections :
+  
+  - Mapper 117. Correction du jeu "La Bi Xiao Xin". Info fourni par tpu.
+  - Bug du changement de côté pour les disques FDS simple face.
+  - Bug du décodeur Game Génie lorsqu'il y avait une comparasion des valeurs.
+  - Entrèes dans la base de donnée.
+
+----------------------------------------------------------------
+1.32
+----------------------------------------------------------------
+
+Shell :
+
+ Ajouts :
+  
+  - Un système de plugin de langue en utilisant les ressources DLL compilés. LDK est inclus dans la source.
+  - La date et l'heure pour le dernier emplacement d'état sont maintenant affiché dans le menu.
+  - La plupart des boites de dialogues des options ont un bouton "Annuler".
+  - La taille de la fenêtre du lanceur est préservé et peut être sauvegardé en quittant l'émulateur (options --> préférences).
+  - Des infos plus détaillés dans certains messages d'erreurs.
+
+ Changements :
+
+  - Diverses corrections esthétiques et améliorations de la GUI (Interface Graphique).
+  - Une police alternative pour quelques pays.
+  - De nombreuses chaînes codés en dur ont été déplaces dans la table de ressource des chaînes.
+  - Pas de création par défaut d'un répertoire si un utilisateur les as déjà spécifié.
+  - Changements des touches de chargement/sauvegarde d'état (N/SHIFT+N) pour une meilleur configuration.
+  - Différentes significations de la touche SHIFT+0/0 pour les emplacements de sauvegarde/chargement d'état. 
+    SHIFT+0 pour réécrire sur les anciens emplacements, 0 pour charger à partir d'un nouvel emplacement.  
+  - Option de "Fréquence du moniteur Auto" se trouvant dans options --> vidéo est activé par défaut.
+  - Mise à jour de la nouvelle version de unrar.dll.
+  - unrar.dll et kaillera.dll sont maintenant chargé à la demande.
+  - Plein de réorganisation.
+  - Nettoyage des tabulations et des espaces dans les fichiers sources par l'intermédiaire d'un utilitaire interne.
+  - Nettoyage du fichier readme HTML.
+
+ Corrections :
+
+  - La plupart des objets menus/dialogues sont grisés s'ils ne sont pas utiles.
+  - Disparition du Menu parfois après avoir quitté les menus/dialogues en mode Plein Ecran.
+  - Le paramètrage des filtres sont maintenant correctement redémarrer en cliquant sur le bouton 'Défaut' dans les options vidéos.
+  - Affichage du 'Nom' et du 'Développeur' dans le lanceur fonctionne dans maintenant en page code ANSI.
+  - Un bug dans le parsage de la chaîne du répertoire s'il y avait eu un échec lors de la création des répertoires par défaut.
+  - Un petit soucis avec le redimensionnement auto de la fenêtre.
+  - Les propriètés d'un fichier image incorrecte dans certaines entrées corrigés de la base de donnée du lanceur.
+    Rafraîchissez votre liste de fichier pour forcer le correctif à prendre effet.
+
+Core :
+
+ Ajouts :
+
+  - Les contrôleurs Pachinko (via la molette de la souris) et Hori Track (via la souris). Info fourni par Enri.
+  - Le système de double cassette Nantettatte Baseball pour le mapper 68. Info fourni par  CaH4e3 et Enri.
+  - Mapper 170 pour le jeu "Fujiya Thinking Games". Info fourni par Enri.
+  - Mapper 197 pour le jeu "Super Fighter III". Info fourni par CaH4e3.
+  - Backup-switch pour les cartouches du Family BASIC et Playbox BASIC (options Interruptions). Info fourni par Enri. 
+  - Palettes Unisystem RP2C04 VS. Info fourni par Quietust et Kevtris.
+  - De nouvelles entrées dans la détection automatique des contrôleurs. 
+  - D'entrées dans la base de donnée.
+
+ Changements :
+
+  - Déplacement du jeu "Subor (Russian)" vers le mapper 166.
+  - Déplacement du jeu "Seicross (J)" vers le mapper 185.
+  - Les noms des contrôleurs. Info from Pongbashi.
+
+ Corrections :
+
+  - Paramètre DIP switch pour le jeu "VS.Bomb Jack".
+  - Le Lightgun dans les jeux "VS.Duck Hunt" et "VS.Hogan's Alley" refonctionne.  
+  - D'entrées dans la base de donnée.
+
+----------------------------------------------------------------
+1.31
+----------------------------------------------------------------
+
+Shell:
+
+ Correction :
+
+  - un bug dans le texte NSF introduit dans la v1.30.
+
+----------------------------------------------------------------
+1.30
+----------------------------------------------------------------
+
+Shell :
+
+ Changements :
+
+  - Mise à jour du fichier 7zxa.dll.
+
+ Corrections :
+
+  - Les infos textes NSF sont maintenant affichés dans le bon code page ANSI.
+
+Noyau :
+
+ Ajouts :
+
+  - Support du microphone Bandai Karaoke Studio via le clavier.
+  - Support des échantillons sons pour les jeux suivant :
+
+     "Family Trainer - Aerobics Studio" -> "ftaerobi"
+     "Moe Pro! '90 - Kandou Hen" -> "moepro90"
+     "Moe Pro! - Saikyou Hen" -> "mpsaikyo"
+     "Moero!! Pro Tennis" -> "mptennis"
+     "Moero!! Pro Yakyuu" -> "moepro"
+     "Moero!! Pro Yakyuu '88 - Ketteiban" -> "moepro88" 
+     "Shin Moero!! Pro Yakyuu" -> "smoepro"
+     "Terao no Dosukoi Oozumou" -> "terao"
+
+    Info fourni par Hap et Pongbashi.    
+  - Mapper 132. Info fourni par Ca4He3.
+  - les cartes Unif "UNL-603-5052", "A65AS" et "EDU2000". Info fourni par Ca4He3.
+  - Support de la souris pour le jeu "Educational Computer 2000". Info fourni par Ca4He3.
+
+ Changements :
+
+  - les noms des Cartes/Chip. Info fourni par Pongbashi.
+  - Déplacement des jeux suivants vers des nouveaux mappers :
+
+     "Crystalis (ch)" -> mapper 195
+     "Captain Tsubasa Vol 2 - Super Striker (ch)" -> mapper 195
+     "Dragon Ball Z 2 - Gekishin Freeza! (ch)" -> mapper 199
+     "Dragon Ball Z Gaiden - Saiya Jin Zetsumetsu Keikaku (ch)" -> mapper 199
+     "San Guo Zhi 2 (ch)" -> mapper 199
+
+ Corrections :
+
+  - Meilleurs taux de précision PAL APU DMC. Info fourni par Blargg.
+  - Mapper 4. Le hardware MMC3B IRQ est maintenant par défaut. Correction du jeu "Star Trek - 25th Anniversary".
+  - Mapper 19. Correction du jeu "Final Lap".
+  - Mapper 60, menu de sélection pour les jeux "TN 95-in-1" et "Super 35-in-1" via le rédémarrage soft. Info fourni par Ca4He3.
+  - Mapper 163. Corrections des jeux "Kou Dai Bao Shi - Hong (ch)" et "Kou Dai Bao Shi - Lan (ch)".
+  - Mapper 198, CHR banking. Correction du jeu "Super Fighter III". Info fourni par Ca4He3.
+  - Mapper 209, mode latch du CHR 4K PPU. Correction du jeu "Power Rangers" et d'autres jeux. Info fourni par Ca4He3.
+  - d'entrées dans la base de donnée.
+
+
+----------------------------------------------------------------
+1.29
+----------------------------------------------------------------
+
+Windows :
+
+ Ajouts :
+
+  - d'une option qui permet de retrouver l'affichage d'une TV.
+  - d'un glisseur pour le contraste UI.
+  
+
+ Changements :
+
+  - L'échelle pour les glisseurs de l'UI.
+  - L'augmentation de la vitesse du Tir Auto et la granularité.
+  - Amélioration lorsque vous entrez/sortez du mode Plein Ecran de manière plus fuide.
+  - Mise à jour en temps réel avec les contrôleurs UI des filtres vidéo.
+  - Meilleur compatibilité avec les différents compilateurs.
+
+ Corrections :
+
+  - d'une barre de scrolling horizontal dans la fenêtre de dialogue "Ouvrir" pour les fichiers compressées. 
+  - d'un bug avec le contrôleur de l'utilisateur dans la boîte de dialogue 'UNIF-to-mapper'.
+  - d'un problème avec la taille de la fenêtre NTSC/PAL au démarrage.
+  - Diverses corrections avec la GUI.
+
+Emulateur :
+
+ Ajouts :
+
+  - des cartes UNIF "KOF97", "64-IN-1 No Repeat", "SHERO", "T-262" et "FK23C". Info fourni par CaH4e3.
+  - des mappers 43 et 236. Info fourni par FE.
+
+
+ Changements :
+
+  - Mise à jour avec la version 0.2.0 du filtre vidéo NTSC crée par Blargg.
+  - Les noms des cartes/Chip. Info fourni par Pongbashi.
+  - Le rembobinage ne sera plus forcé d'être aligné avec une image en particulier.
+  - Dépassement du timing des sprites et flag quirks. Info fourni par Blargg.
+  - Utilisation automatique de la fonction ::_controlfp(..) pour un mode de double-précision ou supérieur du FPU.
+  - le mapper 95 est maintenant associé au NAMCOT 118 en lieu et place du MMC3.
+  - les mappers 189, 198 and 208 sont maintenant associé au MMC3.
+  - le mapper 211 est maintenant associé au JY-xxx (90).
+  - nettoyage de code dans de nombreux mappers.
+  - Changement des jeux suivants vers de nouveaux mappers :
+
+     "SMB+Tetris+NWC" -> mapper 37
+     "Jia A Fung Yun (chinese)" -> mapper 74
+     "Aladdin (pirate)" -> mapper 90
+     "Seicross (redump)" -> mapper 181
+     "Ying Lie Qun Xia Zhuan (chinese)" -> mapper 192
+     "Young Chivalry (chinese)" -> mapper 192
+     "Dai-2-Ji - Super Robot Taisen (chinese)" -> mapper 194
+
+ Corrections :
+
+  - d'un bug de dépassement du compteur d'échantillonge de l'APU.
+  - d'un bug provoquant l'arrêt du rembobineur lorsqu'il est lancé à une vitesse non précisé.
+  - Compteur d'IRQ du FDS. Ce qui permet de corriger le jeu "Druid - Kyoufu no Tobira".
+  - du mapper 45, pas de bankswitching avec le CHR-RAM. Ce qui permet de corriger le jeu "Famicom Yarou Vol.1 7-in-1".
+  - du mapper 57, changement de menu avec le redémarrage soft. Info fourni par CaH4e3.
+  - des mappers 58, 115, 222, 150 et 188. Info fourni par CaH4e3.
+  - du mapper 74. Ce qui permet de corriger entre autre le jeu "Sangokushi (chinese)".
+  - du mapper 83, la sélection de la langue pour "World Heroes 2" et "Fatal Fury 2".
+  - du mapper 90/209/211, ajout du compteur d'IRQ basé sur le M2. Ce qui permet de corriger le jeu "Goal!!" dans la compilation de jeu"45-in-1".
+  - du mapper 117, compteur d'IRQ. Ce qui permet de corriger le jeu "San Guo Zhi 4 - Chi Bi Feng Yun".
+  - du mapper 255, bugs de l'écran du menu comme avec la cartouche de jeu original.
+  - rédemarrage software des mappers 230 et 255.
+  - d'un petit bug de chargement d'état avec le chip son VRC7.
+  - d'entrées dans la base de donnée.
+
+----------------------------------------------------------------
+1.28
+----------------------------------------------------------------
+
+Windows :
+
+ Ajouts :
+  
+  - des glisseurs pour le niveau du volume sonore.
+  - des options supplémentaires pour le filtre vidéo NTSC.
+  - des glisseurs pour le niveau d'obscurcissement des Scanline.
+
+ Changements :
+  
+  - en pressant la touche ALT lorsque le menu est caché, ne devrait plus
+    poser de problème pendant que vous jouez.
+  - l'option pour bloquer les fichiers/répertoires récent est sauvegardés lorsque 
+    vous quittez l'émulateur.
+
+ Corrections :
+
+  - un bug de placement de la fenêtre.
+
+Emulateur :
+
+ Ajouts :
+
+  - sortie son non linéaire dans l'APU.
+  - le mapper 116 pour le jeu "AV-Girl Fighting".
+  - les mappers 163 et 167. Info fourni par tpu.
+  - Entrées dans la base de donnée.
+
+ Changements :
+
+  - mise à jour en version 0.1.7 du filtre vidéo composite NTSC crée par Blargg.
+  - meilleur accords des niveaux de volume pour les chips sons externes.
+  - plus grande précision de l'émulation du chip son SUNSOFT5B.
+  - le jeu "Shanghai" est maintenant sous le mapper 93.
+  - Patch pour le jeu "Dragon Ball Z II - Gekishin Freeza!! (redump)" qui permet
+    d'utiliser le bon type d'EEPROM.
+  - l'option 'aucune limite des Sprites' devrait maintenant être plus sensible
+    aux jeux qui font une utilisation intensive du cycle OAM.
+
+ Corrections :
+
+  - Mapper 45, 53, 74, 90, 93, 164 et 165.
+  - corrections des interruptions et des contrôleurs sur certains jeux VS.System.
+  - Entrées dans la base de donnée.
+
+----------------------------------------------------------------
+1.27
+----------------------------------------------------------------
+
+Windows :
+
+ Ajouts :
+
+  - N'importe quel touche peut maintenant être définie sur un joystick.
+  - Choix d'icônes différents fournis par Pongbashi (Options --> Préférences 
+    --> Association de fichier).
+
+ Changement :
+
+  - Le paramètrage de auto de la fréquence du moniteur est maintenant appliqué
+    lorsque vous quittez la fenêtre se trouvant dans options --> option vidéo.
+
+ Corrections :
+
+  - L'option Power Off (Machine --> Power Off) était grisé.
+  - Les contrôleurs dans le réseau.
+
+Emulateur :
+
+ Ajouts :
+
+  - Mapper 102 (SUNSOFT-3R) pour le jeu "Shanghai (redump)".
+  - Palette RP2C03B/RC2C05-03. Info fourni par Kevtris.
+  - Contrôle du décodeur couleur via R-Y/G-Y/B-Y angle+gain. Fourni avec 3 presets.
+  - Support des fichiers NSF qui utilise plus d'un processeur son externe.
+
+ Changement :
+
+  - Meilleur précision des coefficients chroma/luma de la NES. Info fourni par Blargg.
+
+ Corrections :
+
+  - Mapper 83. Corrige l'intro dans le jeu "World Heroes 2".
+  - Mapper 185. Patch pour le jeu "Seicross (redump)".
+  - Bug de redémarrage de "l'APU triangle step-sequencer".
+  - Des bugs dans le lecteur NSF.
+  - Des entrées dans la base de donnée.
+
+----------------------------------------------------------------
+1.26
+----------------------------------------------------------------
+
+Windows:
+
+ Ajouts :
+ 
+  - Recalibrage automatique des axes du joystick.
+  - Des options supplémentaires pour les filtres vidéo.
+
+ Changements :
+
+  - ::GetLongPathName() est maintenant utilisé en adéquation de ::GetCommandLine().
+  - Meilleur logique lorsqu'est/n'est pas préservé l'échelle d'une photo NES en Plein écran.
+  - Corrections ésthétiques mineurs.
+
+ Corrections :
+
+  - Plantage au démarrage sous Win 98/ME.
+  - Plantage quand vous quittez l'émulateur lorsqu'il y a 2 périphérique vidéo ou plus.
+  - L'affichage en Plein écran invalide sur les écrans en dual.
+  - Changement d'un paramètre dans la chaîne ::CompareString() pour améliorter la compatibilité avec Win 98/ME/2k.
+  - Correction d'un lien LIB pour la fonction MSLU.
+  - Bug dans WM_DROPFILES et WM_COPYDATA handlers.
+  - Certaines touches sont maintenant ignorés. Ce qui permet d'utiliser certains claviers japonais.
+  - Possiblité de parser les noms de fichiers sans les guillemets en mode 'ligne de commande'.
+
+Emulateur :
+
+ Ajouts :
+
+  - Utilisation du MD5 au lieu du CRC lors de la vérification de donnée modifié.
+  - Nouveau fichier image CRCs pour la détection automatique des contrôleurs.
+  - Entrées dans la base de donnée.
+
+ Changements :
+
+  - Optimisations du filtre vidéo NTSC.
+  - Modifications mineurs sur la palette.
+  - Retrait de la fonction __attribute__ ((fastcall)).
+
+ Corrections :
+
+  - Des corrections de bugs avec le filtre vidéo NTSC.
+  - Patch pour le jeu "My Life My Love - Boku no Yume - Watashi no Negai" qui permet d'utiliser une autre version du chip MMC3.
+  - Bug macro NST_ASSERT() sur les plate-formes autres que Win32.
+
+----------------------------------------------------------------
+1.25
+----------------------------------------------------------------
+
+Windows :
+
+ Corrections :
+
+  - d'une erreur parse du fichier de configuration après que les cheats aient été sauvegardés.
+  - d'un problème de guillemets avec le nom du fichier exécutable (concerne la ligne de commande).
+  - des noms de fichiers d'archive utilisant les caractères non ascii.
+  - d'un bug d'association de fichier.
+  - des caractères "Katakana" lors de l'utilisation de la fonction 'clipboard-to-NES-screen'.
+  - d'une légére imprécision du mapping du texel vers le pixel.
+
+Emulateur :
+
+ Ajouts :
+
+  - Emulation du composite vidéo  au format NTSC. Nécessite un ordinateur rapide. Ajout venant de
+    Blargg et NewRisingSun.
+  - Mapper 27.
+
+ Changements :
+
+  - Retrait des noms dans la base de données. Beaucoup trop d'erreurs.
+
+ Corrections :
+
+  - du timing IRQ du mapper 16. Ce qui corrige le jeu SD Gundam Gaiden - Knight Gundam Monogatari 2 - Hikari no Kishi.
+  - King of Fighters 99 (hack no-frame-IRQ).
+  - Erreurs de sauvegardes d'états avec les jeux MMC3.
+  - Le blitter produisant des problèmes sur l'écran (rarement).
+  - Des erreurs ISO C++.
+
+
+----------------------------------------------------------------
+1.24
+----------------------------------------------------------------
+
+Portage Windows :
+
+ Ajouts :
+
+  - Support de l'unicode. Les utilisateurs de Win98/Me ont besoin de récuperer le fichier "Unicode Layer DLL" (unicows.dll)
+    à partir du site de Microsoft et de le placer dans le même répertoire que Nestopia.
+
+    http://download.microsoft.com/download/b/7/5/b75eace3-00e2-4aa0-9a6f-0b6882c71642/unicows.exe
+
+  - Editeur de Palette (dans options --> vidéo).
+  - Convertisseur de film  au format NSV en fichier AVI.
+  - Plusieurs nouvelles commandes pour les fichiers NSP.
+  - Les textes se trouvant dans le bloc note peuvent maintenant être collé par l'intermédiaire du menu ou 
+    en pressant la touche F12 lorsque le Family Basic ou le Subor keyboard est utilisé.
+
+ Changements :
+
+  - Le fichier dll kailleraclient.dll original (réseau) est remplacé par la version Anti3D.
+  - Localized keyboard layout names.
+  - Meilleur définition des touches sous DirectInput avec le clavier Family Basic.
+  - Le chemin du fichier de sauvegarde par défaut est .\save i au lieu de .\cartridge. 
+  - De nombreuses corrections esthétiques.
+
+ Corrections :
+   
+  - Menu -> Fichier -> Enregistreur de Son, la commande rembobiner est maintenant désactivé pendant 
+    l'enregistrement.
+  - J'ai bossé sur le tristement bug de mémoire iostream sur le VC8.
+
+Emulation du noyau :
+
+ Ajouts :
+
+  - Chip son VRC7 (Lagrange Point).
+  - Mappers 137,138,139,141,143,145,146,147,148 et 149. Info venant de CaH4e3.
+  - UNIF boards 8157 and CC-21. Info venant de CaH4e3.
+  - Périphérique Family Trainer, Subor Keyboard, Doremikko Keyboard (partiel) et Party Tap.
+  - Le fichier Turbo utilise le format *.tf comme fichier d'extension (certains jeux par ASCII).
+  - L'enregistreur de donnée utilise le format *.tp comme fichier d'extension (Family Basic, Mach Rider, Excitebike, d'autres).
+  - Datach Joint ROM System et Barcode Battler.
+  - 24C01+24C02 serial EEPROM pour les mappers 16 et 157.
+  - Le microphone sur le second contrôleur en pressant via une pression du bouton.
+  - samples son pour Moero!! Pro Yakyuu.
+  - Une option pour permettre de presser simultanement les touches Haut/Bas et Gauche/Droite.
+  - Des entrées dans la base de donnée des jeux.
+ 
+ Corrections:
+
+  - Le pitch son FME-07.
+  - Les mappers 76 et 83.
+  - Un retard plus long pour la lecture des blocs de démarrage du FDS. Le jeu Time Twist fonctionne.
+  - Des entrées dans la base de donnée des jeux.
+  - Un bug dans le lecteur NSF avec certaines musiques FDS.
+  - Frame IRQ est désactivé par défaut (hack) pour les jeux King of Fighters 97/98 et Sonic 3D Blast 6.
+  - Les coefficients pour les modes de couleur d'emphase. Info venant de Quietust.
+
+
+----------------------------------------------------------------
+1.23
+----------------------------------------------------------------
+
+Portage Windows :
+
+- Mise à jour du compilateur.
+- Ajout d'une option dans Options --> Vidéo, qui permet de prendre le pas sur les autres fréquences d'affichage. Cette option est désactivé par défaut pour des raisons de compatibilité mais en l'activant vous obtiendrez de meilleurs performances.
+- IDirect3DDevice9::SetDialogBoxMode() et D3DPRESENTFLAG_LOCKABLE_BACKBUFFER
+  sont SEULEMENT activé lorsqu'un menu ou une fenêtre est visible en mode plein écran. 
+Améliorations :
+
+- Vitesse et vsync du timing.
+- Ajout d'une option de Triple buffering dans options --> timing.
+- L'émulation est maintenant arrêté lors de l'activation de la barre de menu.
+- Les derniers types de fichiers sélectionnés dans le lanceur sont maintenant conservés.
+- Les noms de fichiers trop long pour être affiché dans les messages d'écran sont coupés en utilisant des éllipses.
+- Corrections de bugs mineurs.
+
+----------------------------------------------------------------
+1.22
+----------------------------------------------------------------
+
+Portage Windows :
+
+- Ajout du support des fichiers RAR et 7-Zip.
+- Possibilité d'utiliser des styles visuels XP.
+- L'interface graphique a été un peu nettoyé et correction de l'ordre des onglets.
+- Ajout du support de recherche de cheat..
+- Ajout de certaines options concernant le joystick. Les personnes ayant des problèmes de joysticks avec les versions précédentes de Nestopia, pourront désactiver les axes fautifs.
+- Amélioration des performances dans le saut d'image auto.
+- Correction d'un bug dans le patch auto des fichiers IPS.
+- Correction d'un bug d'enregistrement de fichier Wav.
+- Correction d'un bug lors de l'utilisation de la combinaison de touche Alt+Tab pour passer en plein écran.
+- Correction d'un bug lors de l'effacement/vidage des cheats.
+
+
+Emulation du noyau :
+
+- Ajout du support de rembobinage en temps réel (jusqu'à 1 minute). Pour l'utiliser, assigner l'option à n'importe quel touche et activer là dans Options --> timing.
+- Ajout du support des cheats (plage d'adresse entière).
+- Ajout du support pour les cheats codes "Pro Action Rocky".
+- Ajout du DPCM channel sample interpolation et DC offset removal.
+- Amélioration du timing PPU vblank et du comportement des flag (info de Blargg).
+- Correction du mapper 6 ce qui a permis de mettre le bon mapper sur le jeu "Mi Hu Chen (hFFE)" (info de CaH4e3).
+- "Shin Samurai Spirits 2", "Power Rangers III" et "Power Rangers IV" sont sur le mapper 209.
+- "Mortal Kombat 3 - Special 56 People" passe sur le mapper 90.
+- Mapper 90 hacké, des jeux supplémentaires sont maintenant jouables.
+- Ajout du mapper 148 ce qui permet de mettre le jeu "Sugoro Quest - Dice no Senshitachi (asia)" dessus.
+- Ajout du mapper 183 (info de CaH4e3).
+- Ajout du mapper 186 (info de CaH4e3).
+- Correction du mapper 187, "King Of Fighters 96" est maintenant jouable.
+- Ajout du mapper 216 (info de CaH4e3).
+- Ajout de la carte UNIF DreamTech (info de CaH4e3).
+- Ajout de la carte UNIF H2288 (info de Kevtris et CaH4e3).
+- Ajout de la possiblité d'insérer/éjecter un disque FDS pendant la lecture/enregistrement d'un film.
+
+----------------------------------------------------------------
+1.21
+----------------------------------------------------------------
+
+- Ajustement du redémarrage à froid du timing PPU, ce qui permet de corriger un bug dans Time Lord.
+- Retrait de la vérification $4017.7 pour l'IRQ DMC, ce qui permet de corriger un bug dans les jeux Silent Service et Time Lord.
+- Ajout d'une option qui permet de garder la position de la fenêtre au même endroit que vous l'aviez laissé.
+- Ajout d'une fonction A12 hook pour la commande $2007(R/W).
+- Ajout d'une nouvelle version de ZLib.
+- Correction d'un bug lors du focus de la fenêtre.
+- Correction d'un bug concernant la taille de la fenêtre au démarrage.
+- Correction de 2 bugs mineurs dans les sauvegardes et chargements d'états de l'APU.
+- Correction d'un bug mineur de surcharge de sprite du PPU.
+- Correction de l'entrée de la VS palette, VS.Goonies semble plus beau.
+- Les options se trouvant dans le menu "Machine" sont maintenant sauvegardés quand vous quittez l'émulateur.
+- Amélioration de la compatibilité avec les périphériques DirectInput.
+
+----------------------------------------------------------------
+1.20
+----------------------------------------------------------------
+
+Malgré le fait que j'ai mis presque 2 ans pour terminer cette version, j'ai oublié une bonne partie des changements et corrections que j'ai fait pendant cette période, mais je vais essayer de faire un récapitulatif des nouveautés.
+
+Mais tout d'abord, j'aimerais remercier tous les beta testers qui m'ont aidé a amélioré cette version, en particulier Hellsbane, Michael Walsemann, Benjamin Siskoo et Robert Tuccitto pour leurs temps consacrés et les efforts dans la recherche de bugs.
+
+Le portage Windows a été réecrit à partir d'un scratch (je me suis rendu compte qu'en partant du scratch, cela a pris plus de temps que je n'avais pu l'imaginé). Le noyau de l'émulation est lui aussi passé par une révision compléte.
+
+Voici quelques une des nouveautés :
+
+ - DirectDraw a été enlevé pour être remplacé par Direct3D (DirectX 9.0c est maintenant nécessaire).
+ - Plus d'options dans les filtre vidéo.
+ - Un traitement multi tâche plus adapté.
+ - Les touches du menu sont configurable.
+ - Simplification pour effectuer des copies d'écran et GDI+ n'est plus nécessaire.
+ - Vitesse du Tir Auto sélectionnable.
+ - Répertoires récent.
+ - Capacité de bloquer et vider les fichiers récent et les listes du répertoire.
+ - Source LED sélectionnable pour les accès disque FDS.
+ - Emulation alternative de la vitesse par l'intermédiaire d'une touche/bouton.
+ - Possibilité de changer la couleur du menu.
+ - Les changements de la luminosité/saturation/hue sont immédiats.
+ - Plus de diagnostiques par l'intermédiaire du fichier d'enregistrement (désactivé par défaut).
+ - Le curseur est caché automatiquement.
+ - Beaucoup de chaînes codé en hard se trouvent maintenant dans la section ressource. 
+ - Info sur les images FDS et NSF.
+ - Les fichiers IPS peuvent s'appliquer sur les fichiers disques FDS.
+ - Possibilité d'éditer les en-tête des fichiers Ines. 
+ - Support des filtres Hq2x/Hq3x.
+ - Ajout d'amélioration dans la GUI.
+
+Nouveau mappers iNes :
+
+ 53, 56, 142, 158, 164, 165, 193, 203, 204, 205, 206, 207, 208,
+ 209, 210, 211, 212, 213, 215, 217
+
+Mappers iNes corrigés :
+  
+ *Beaucoup*
+
+Nouvelles cartes UNIF :
+
+ Mario 1 Malee 2, Novel Diamond 9999999-in-1, Super Game 8237 
+ Super 24-in-1, WS 40-in-1
+
+Nouveaux contrôleurs:
+
+ Oeka Kids Tablet, Hyper Shot, Crazy Climber, Mahjong, Exciting Boxing 
+ Top Rider, Pokkun Moguraa
+
+Autres choses concernant le noyau de l'ému :
+
+ - Un code C++ plus conforme.
+ - Facilitation des portages sur d'autres plateformes en utilisant une nouvelle écriture de l'API.
+ - De nombreuses améliorations de la vitesse (mais pas au détriment de la précision de l'émulation).
+ - Réecriture des formats de fichiers des sauvegardes d'états et les films, les anciens fichiers ne fonctionneront pas.
+ - Emulation plus précise de l'APU et PPU, merci à RE work by Blargg, Kevtris et Quietust.
+ - Perfectly time-aligned sound sample output by using a common clocking rate
+ - Utilise la nouvelle palette mise à jour par Matrixz.
+ - Meilleur algorythme de génération de couleur en NTSS (mais pas encore parfait) basé sur les tweaks de AWJ.
+ - Corrections et ajouts dans la base de donnée des ROM.
+ - Support de la sortie son stéréo phantom.
+ - Emulation plus prècise du FDS.
+ - Mailleur qualité du son avec les chips sons externes.
+ - Sélection auto entre la famicom et l'adaptateur 4 joueur NES basé sur les CRC des jeux.
+ - Emulation plus précise de plusieurs contrôleurs.
+ - Comportement du redémarrage hard/sotf plus précis.
+ 
+Si vous aimez cette version et aimerez me remercier pour manger Nestopia, dormir Nestopia et respirer Nestopia pendant ces 2 dernières années, n'hésitez pas à faire une petite donation par l'intermédiaire du lien Paypal :
+ http://sourceforge.net/projects/nestopia.
+
+----------------------------------------------------------------
+1.09
+----------------------------------------------------------------
+
+- Ajout du Réseau (Kaillera).
+- Ajout de filtre graphique Scale2x/3x.
+- Le menu peut maintenant être basculé en mode fenêtré.
+- Correction d'un bug de 'Sprites Illimités'.
+- Correction du compteur IRQ FDS, plus de scintillements dans SMB2(j).
+- Correction du mapper 5, plus de scintillements dans tous les jeux KOEI, + d'autres. Les
+  sauvegardes de jeux et d'états sont corrigés.
+- Ajout du mapper 12, info venant de VirtuaNES.
+- Tweak du compteur IRQ du mapper 17, corrige quelques jeux FFE F8 supplémentaires.
+- Réassignement du mapper 48 en 33 (Flintstones - The Rescue of Dino & Hoppy (j)).
+- Correction du mapper 65, glitches gone in "Kaiketsu Yanchamaru 3 - Taiketsu! Zouringen" among others.
+- Correction du mapper 69, "Honoo no Toukyuuji - Dodge Danpei" + d'autres qui fonctionnent.
+- Correction du mapper 182, plus de scintillements dans "Super Donkey Kong".
+- Correction du mapper 245, "Yong Zhe Dou E Long - Dragon Quest 7" + d'autres qui fonctionnent.
+- Correction du mapper 249, glitches gone in "Shui Hu Zhuan" + d'autres.
+- Ajout du mapper 200, info venant de CaH4e3.
+- Ajout du mapper 201, info venant de CaH4e3.
+- Ajout du mapper 202, info venant de CaH4e3.
+- Ajout du mapper 252, info venant de saro.
+- Ajout du mapper 254, info venant de VirtuaNES.
+- Un message d'avertissement est affiché lorsque les jeux encryptés sont chargés.
+- Ajout d'une correction auto de la taille du PRG-ROM sur les jeux 512k MMC1 connus (Dragon Warrior/Quest 4).
+- L'adresse OAM est maintenant vidé au démarrage du VBLANK, corrige des erreurs de sprite dans"Titanic 1912", 
+  "Godzilla" et proabablement d'autres jeux.
+- Fait certaines optimisations du PPU (scanline tile caching).
+- Correction d'un bug mineur dans la priorité du thread.
+- Correction d'un bug du redémarrage du PPU, corrige les redémarrages de la machine dans "Knight Rider".
+- Changement de la manière de la RAM CPU pour avoir l'initialisation lors du power on, corrige les premières scénes d'intro 
+  dans "Super Donkey Kong - Xiang Jiao Chuan".
+- Retrait de hacks IRQ triggering pour les mappers 19,21,23,25,33,40,50,65,67,83 et 183.
+- Basculement des contrôles p1/p2 sur certains jeux VS.
+
+----------------------------------------------------------------
+1.08
+----------------------------------------------------------------
+
+- Ajout d'un Lanceur.
+- Ajout du support copier-coller des fichiers.
+- Ajout d'un peu plus d'options dans les préférences.
+- Changement aussi des chemins relatifs qui sont préservés.
+- Correction du mapper 1, plus aucun scintillements dans "Air Fortress".
+- Correction du mapper 4, le son fonctionne dans "Startropics" & "Startropics 2 - Zoda's Revenge" (les jeux MMC6B différe des MMC3).
+- Correction du mapper 10, "Fire Emblem" et d'autres fonctionnent.
+- Correction du mapper 18, "Toukon Club" et d'autres fonctionnent (reste encore des scintillements mineurs).
+- Correction du mapper 19, "Family Circuit '91", "Wagan Land 3" et d'autres fonctionnent.
+- Correction du mapper 23, toutes les versions valides de "Akumajou Special - Boku Dracula Kun" devrait maintenant fonctionner.
+- Correction du mapper 32, "Ai Sensei no Oshiete - Watashi no Hoshi" et "Major League" fonctionnent.
+- Correction du mapper 33, plus aucun scintillements dans "Captain Saver".
+- Correction du mapper 51, "11-in-one Ball Games" refonctionne.
+- Correction du mapper 58, "Study and Game 32-in-1" fonctionne.
+- Correction du mapper 60, "Reset Based 4-in-1" fonctionne.
+- Correction du mapper 62, "Super 700-in-1" fonctionne.
+- Correction du mapper 68, "Maharaja" fonctionne.
+- Correction du mapper 70, moins de scintillements dans "Gegege no Kitarou 2 - Youkai Gundan no Chousen".
+- Correction du mapper 82, plus aucun scintillements dans "Kyuukyoku Harikiri Stadium 3" ainsi que pour d'autres jeux.
+- Correction du mapper 87, "City Connection", "Ninja Jajamaru Kun" et d'autres fonctionnent.
+- Correction du mapper 88, plus aucun scintillements dans "Dragon Spirit - Aratanaru Densetsu" et d'autres fonctionnent.
+- Correction du mapper 90, moins de scintillements dans "Mortal Kombat 3 - Special 56 Peoples".
+- Correction du mapper 101, "Urusei Yatsura - Lum no Wedding Bell" fonctionne.
+- Correction du mapper 113, plus aucun scintillements dans "16 Mahjang".
+- Correction du mapper 119, plus aucun scintillements dans "Pinbot" et "Highspeed".
+- Correction du mapper 185, "Bird Week" fonctionne.
+- Correction du bug Game Génie (certains codes n'aurait soit pas fonctionné ou planté l'application).
+- Amélioration de la synchronisaton du CPU/PPU. Disparition de tremblements dans beaucoup de jeux ("Times of Lore", "Kick Master"). 
+- Tweak du DMC et des fréquences de sortie du canal Noise (Bruit) pour le mode PAL. Le son PAL est maintenant plus précis.
+- Tweak des compteurs DMC DMA/IRQ. La plupart des jeux comptaient sur un timing correcte du DMC IRQ. Cela devrait maintenant fonctionner (les jeux Codemasters, la démo de Ian Bell's Tank).
+
+----------------------------------------------------------------
+1.07
+----------------------------------------------------------------
+
+Ajout du support des associations de fichier (dans préférences).
+
+Ajout d'une option pour sélectionner entre les exemples de simple et multiple applications (dans préférences).
+
+Correction d'un bug qui forcé à redéfinir les touche pour le second périphérique joystick à être redémarrer à chaque fois que Nestopia était relancé.
+
+Changement aussi de tous les codes game génie qui sont sauvergardés quand vous quittez l'émulateur.
+
+Déplacement des  la plupart des messages sur écran dans la table de resource "string" pour améliorer la vie des personnes qui font les traductions.
+
+Mise à jour de la base de donnée de rom. Merci encore [yang] pour la nouvelle compilation.
+
+Correction des fichiers ns1..ns9 (emplacements de sauvegarde).
+
+Ajout d'une ligne de commande paramétre.
+
+Ajout d'une barre de statut (menu).
+
+Ajout d'un compteur de FPS (menu).
+
+Ajout d'une option pour forcer la fenêtre à être en haut (menu).
+
+Ajout d'une option pour désactive le timer de compteur de performance (dans timer).
+
+Ajout d'une option pour désactiver la sauvegarde de configuration à la sortie de l'émulateur (dans préférences).
+
+Ajout de plus de raccourcis dans le menu.
+
+Meilleur multi tâche.
+
+Ajout du contrôle automatique de la priorité du thread (dans préférences).
+
+Changement d'un problème avec les en tête de fichier iNes qui pouvait passer à travers le chargeur. 
+
+Amélioration des timers.
+
+Fait de nouveaux icônes.
+
+Beaucoup de corrections de bug.
+
+----------------------------------------------------------------
+1.06
+----------------------------------------------------------------
+
+Correction du bug contrôleur sneaked up in v1.05. IDirectInputDevice8::Poll() was the cause. I forgot it could return DI_NOEFFECT which is not the same as DI_OK. The bug affected devices that didn't need manual polling.
+
+Fixed a bug that caused all soundcards without support for hardware-mixed secondary buffers to not work.
+
+Did some small optimizations in the PPU core.
+
+Changed so that state slots are flushed to files (if enabled) every time the user saves instead of only during load/close.
+
+Modified the path dialog. Two check mark buttons now control the auto loading and saving of state slots.
+
+Less sound stutter when toggling the menu in fullscreen.
+
+Tweaked the render queue and put a limit on how many frames behind the GPU can be. This is to prevent sudden jerks and input lag.
+
+----------------------------------------------------------------
+1.05
+----------------------------------------------------------------
+
+Corrected the CRC database searcher (several games had the wrong name displayed in the title bar)
+
+Fixed a bug that made the user defined paths not to be saved properly.
+
+Changed so that images with support for both PAL and NTSC will prioritize NTSC and not PAL as in earlier versions when "auto mode" is selected.
+
+Added mapper 107 ("Magic Dragon")
+
+Added mapper 134 ("Olympiq IQ")
+
+Added mapper 135 ("Super Pang")
+
+Added mapper 198 (chinese version of "Destiny of an Emperor")
+
+Fixed a bug in the UNIF loader that caused all files having a board name beginning with NES-,UNL-,HVC-,BTL- or BMC- to be parsed wrongly.
+
+Fixed a bug that caused the application to hang and/or crash when Alt-Tabbing.
+
+Removed most of the sound clicks and pops heard when the audio gets disabled (menu entering, window moving etc).
+
+Made so that all the save slots automatically gets imported/exported to/from files using <name>.ns1 through ns9 on load/close. It's ON by default.
+
+Fixed a PPU bug that could cause the application to crash when loading up a game in the middle of an NSF tune.
+
+Fixed the frame rate timer. In previous versions it had the potential to cause serious lagging.
+
+Fixed the fullscreen mode cursor, sometimes it could get visible/invisible when it really shouldn't.
+
+Changed to using C++ exceptions, way better error handling now.
+
+Added the option to add custom keys to the "save to next slot" and "load from last slot" commands.
+
+Added 8bit graphic mode. filters are not supported for this one.
+
+Improved the TV-mode graphic filter and removed all visual artifacts in the marginals.
+
+Added an option in the preferences dialog to disable the use of the ROM database.
+
+Added more logfile info.
+
+----------------------------------------------------------------
+1.04
+----------------------------------------------------------------
+
+Added a TV-mode graphic filter.
+
+Moved the timing options into a separate dialog and added some more features. Speed throttling can now be toggled by F5 (default).
+
+Did some further improvements to the sound quality.
+
+Fixed mapper 64, "Skull & Crossbones" and "Klax" are now playable, thanks to Xodnizel for his findings on this insane mapper.
+
+Fixed mapper 70, "Kamen Rider Kurabu" and "Space Shadow" are now playable.
+
+Fixed mapper 83, "Garou Densetsu 2 (Fatal Fury)" and "World Heroes 2" are now playable.
+
+Added mapper 133 ("Jovial Race")
+
+Fixed mapper 232, "Maxi 15" is now playable.
+
+Fixed mapper 244, now "Decathlon (Asia)" suffers from less glitches.
+
+Changed the configuration file, now it's text based and more hacker friendly.
+
+Changed the shortcut key for fullscreen/window mode switch to ALT+RETURN.
+
+In addition to the right mouse button ESCAPE now also toggles the menu in fullscreen mode.
+
+Fixed a bug that prevented new battery-ram files from being created.
+
+Cleaned up a few things in the DirectSound manager. Hopefully this fixes the sound problems a few people have had.
+
+Added many new file CRC's to the internal database. Thanks to [yang] for the assembling.
+
+Now Nestopia remembers the last selected screen/window size.
+
+Optimized the scanline graphic filter renderer.
+
+Added some more logfile output messages.
+
+----------------------------------------------------------------
+1.03
+----------------------------------------------------------------
+
+Added 2xSaI, Super 2xSaI and Super Eagle graphic filters.
+
+Added support for all the graphic filters in window mode.
+
+Added game configuration file support.
+
+Improved sound quality.
+
+Added some more file CRC's to the zapper-auto-detector.
+
+Added an option to map all keys in one go.
+
+Added an option in the preferences dialog to force the application's thread to be in high priority mode.
+
+Corrected an entry in the pAPU's length counter LUT.
+
+Changed the square channel's default frequency limit. This fixes the sound in "Mega Man 2" and possibly a few other games.
+
+Fixed a bug that caused some save states not to load correctly.
+
+Lowered the output volume on the FDS sound chip.
+
+Fixed mapper 78, "Holy Diver" and "Uchuusen - Cosmo Carrier" are now playable.
+
+Fixed a frame IRQ counter bug, now "Akagawa no Yuurei Ressha" and "Dragon Warrior" among others work as they should.
+
+Fixed a bug which sometimes caused the user defined IPS path to be ignored.
+
+Rewrote a few parts in the movie player/recorder. Should be more stable now.
+
+Cleaned up a few thing in the GUI.
+
+----------------------------------------------------------------
+1.02 
+----------------------------------------------------------------
+
+Ajout du support UNIF.
+
+Correction d'un bug dans le décodeur Game Génie, maintenant les huit caractéres du codes fonctionnent correctement.
+
+Ajout du support des plus de boutons pour les axes (sliders, pov etc). Havn't tested them tough as I don't have that kind of joystick, can anyone confirm they work?
+
+Fixed so that Nestopia will recognise the Twin Famicom BIOS ROM.
+
+Added adjustable dipswitches for "Nintendo World Championship" (mapper 105), now you can control and display the timer.
+
+Correction du mapper 91 (IRQ counter thing), now all mapper 91 games shows the correct graphic.
+
+Fixed mapper 187, now "Street Fighter Zero 2 '97" works.
+
+Fixed a bug in the Sunsoft FME-07 sound core.
+
+Did some cleanup in the application error handling routines - no more page-faults on known errors.
+
+No more distortion in screen when enabling/disabling the menu in fullscreen mode (LockWindowUpdate() to the rescue).
+
+Fixed a bug which sometimes caused the window, when coming out of fullscreen, to be maximized and stretched to the size of the desktop.
+
+Fixed a bug that caused the switching from window to fullscreen with the same display mode to fail.
+
+Fixed a bug in the PDXSTRING class, nothing that affected previous versions of Nestopia though.
+
+Lowered the system requirements to Pentium MMX, users with processors that lacks the CMOV instruction can now run Nestopia.
+
+Added some menu options to control the size of the window/screen (works both in window and fullscreen mode).
+
+----------------------------------------------------------------
+1.01 
+----------------------------------------------------------------
+
+Correction d'un bug qui provoqué la sortie de l'application avec le message "DirectSoundCreate8() failed".
+
+----------------------------------------------------------------
+1.00 
+----------------------------------------------------------------
+
+Version Initial.

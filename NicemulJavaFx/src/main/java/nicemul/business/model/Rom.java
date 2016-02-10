@@ -13,6 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import nicemul.business.model.enumeration.RegionEnum;
+
 import org.apache.commons.lang.StringUtils;
 
 @Entity

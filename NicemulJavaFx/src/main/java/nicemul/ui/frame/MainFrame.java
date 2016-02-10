@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import netscape.javascript.JSObject;
-import nicemul.ui.bridge.menu.MenuBridge;
+import nicemul.ui.bridge.UIBridge;
 
 public class MainFrame extends Application {
 
@@ -20,7 +20,7 @@ public class MainFrame extends Application {
 			webView = new WebView();
 
 			JSObject jsobj = (JSObject) webView.getEngine().executeScript("window");
-			jsobj.setMember("java", new MenuBridge(webView.getEngine()));
+			jsobj.setMember("java", new UIBridge(webView.getEngine()));
 
 			String path = System.getProperty("user.dir");
 			path.replace("\\\\", "/");

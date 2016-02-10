@@ -1,4 +1,4 @@
-package nicemul.business.model;
+package nicemul.business.model.enumeration;
 
 public enum RegionEnum {
 
