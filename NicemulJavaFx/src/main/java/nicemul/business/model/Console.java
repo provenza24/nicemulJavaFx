@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -46,20 +49,27 @@ public class Console implements Serializable {
 
 	@Column(name = "DOCK_ICON")
 	private String dockIcon;
-	
+
 	@Column(name = "ICON")
 	private String icon;
-	
+
 	@Column(name = "MINI_ICON")
 	private String miniIcon;
 
-	@OneToMany(cascade = {CascadeType.ALL}, mappedBy = "console", orphanRemoval=true)
+	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "console", orphanRemoval = true)
 	public List<Rom> roms;
+
+	@ManyToMany
+	@JoinTable(name = "CONSOLE_EMULATORS", 
+	joinColumns = { @JoinColumn(name = "CONSOLE_ID", referencedColumnName = "CONSOLE_ID") }, 
+	inverseJoinColumns = { @JoinColumn(name = "EMULATOR_ID", referencedColumnName = "EMULATOR_ID") })
+	private List<Emulator> emulators;
 
 	{
 		roms = new ArrayList<Rom>();
+		emulators = new ArrayList<Emulator>();
 	}
-	
+
 	public Console() {
 	}
 
@@ -139,7 +149,7 @@ public class Console implements Serializable {
 		this.roms = roms;
 	}
 
-	public boolean addRom(Rom rom) {		
+	public boolean addRom(Rom rom) {
 		for (Rom consoleRom : roms) {
 			if (consoleRom.getName().equals(rom.getName())) {
 				return false;
@@ -147,6 +157,16 @@ public class Console implements Serializable {
 		}
 		roms.add(rom);
 		rom.setConsole(this);
+		return true;
+	}
+	
+	public boolean addEmulator(Emulator emulator) {
+		for (Emulator consoleEmulator : emulators) {
+			if (consoleEmulator.getName().equals(emulator.getName())) {
+				return false;
+			}
+		}
+		emulators.add(emulator);		
 		return true;
 	}
 
@@ -165,5 +185,13 @@ public class Console implements Serializable {
 	public void setMiniIcon(String miniIcon) {
 		this.miniIcon = miniIcon;
 	}
-	
+
+	public List<Emulator> getEmulators() {
+		return emulators;
+	}
+
+	public void setEmulators(List<Emulator> emulators) {
+		this.emulators = emulators;
+	}
+
 }
