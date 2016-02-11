@@ -20,7 +20,7 @@ public class Launcher {
 		consoleService.scanConsoles();							
 		consoleService.scanAllRoms();
 		consoleService.scanEmulators();
-		
+						
 		MainFrame mainFrame = new MainFrame();
 		mainFrame.start(args);
 	}

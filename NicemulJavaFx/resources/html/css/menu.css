@@ -1,6 +1,6 @@
 /* General styles for all menus */
 .cbp-spmenu {
-	background: #ffffff;	
+	background: #ffffff url(../images/main-bg.gif);	
 	position: fixed;
 }
 
@@ -38,9 +38,10 @@
 .cbp-spmenu-vertical {		
 }
 
-.cbp-spmenu-vertical a {
+.cbp-spmenu-vertical a {		
 	border-bottom: 1px solid #3F51B5;
 	padding: 6px;
+	padding-left:25px;
 }
 
 /* -----------------------------------------------------------------------------

@@ -1,5 +1,11 @@
 package nicemul.ui.frame;
 
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLStreamHandler;
+import java.net.URLStreamHandlerFactory;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.web.WebView;
