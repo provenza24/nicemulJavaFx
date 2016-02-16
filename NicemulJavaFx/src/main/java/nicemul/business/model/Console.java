@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -58,6 +59,9 @@ public class Console implements Serializable {
 
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "console", orphanRemoval = true)
 	public List<Rom> roms;
+	
+	@OneToOne
+	private Emulator defaultEmulator;
 
 	@ManyToMany
 	@JoinTable(name = "CONSOLE_EMULATORS", 
@@ -188,6 +192,14 @@ public class Console implements Serializable {
 
 	public List<Emulator> getEmulators() {
 		return emulators;
+	}
+
+	public Emulator getDefaultEmulator() {
+		return defaultEmulator;
+	}
+
+	public void setDefaultEmulator(Emulator defaultEmulator) {
+		this.defaultEmulator = defaultEmulator;
 	}
 
 	public void setEmulators(List<Emulator> emulators) {

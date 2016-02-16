@@ -31,7 +31,7 @@ public class RomsPageBuilder extends AbstractPageBuilder {
 			List<Rom> roms = consoleService.findFullConsoleRoms(consoleName);
 
 			for (Rom rom : roms) {
-				String gameLineFile = FileMsgGenerator.generateStringFromFile("resources/html/rom-line-detail.html");
+				String gameLineFile = FileMsgGenerator.generateStringFromFile("resources/html/rom-line-detail-simple.html");
 				gameLineFile = gameLineFile.replaceAll("\t", "");
 				gameLineFile = gameLineFile.replaceAll("\r", "");
 				gameLineFile = gameLineFile.replaceAll("\n", "");

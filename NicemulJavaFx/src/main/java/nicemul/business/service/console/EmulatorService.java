@@ -24,7 +24,7 @@ public class EmulatorService implements IEmulatorService {
 		
 		Rom rom = romService.findFullRom(idRom);
 		
-        Emulator emulator = rom.getConsole().getEmulators().get(0);
+        Emulator emulator = rom.getConsole().getDefaultEmulator();
         CommandType commandType = emulator.getCommandType();
         if (commandType == CommandType.RUNTIME) {
             executeRuntime(emulator, rom);

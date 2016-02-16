@@ -32,8 +32,7 @@ public class UIBridge {
 		try {			
 			PageEnum pageEnum = PageEnum.valueOf(page);
 			IPageBuilder pageBuilder = pageBuilders.get(pageEnum);
-			String viewFile = viewFile = pageBuilder.buildPage(pageEnum.toLiteral(), params);
-			
+			String viewFile = viewFile = pageBuilder.buildPage(pageEnum.toLiteral(), params);			
 			webEngine.executeScript("document.getElementById('mainView').innerHTML = '" + viewFile + "';");
 		} catch (BusinessException e) {
 			e.printStackTrace();

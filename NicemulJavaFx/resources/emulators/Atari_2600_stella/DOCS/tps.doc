@@ -1,0 +1,139 @@
+                              This Planet Sucks
+
+                                  (C) 1997
+
+                                  What?Ware
+
+  ------------------------------------------------------------------------
+
+Playing Instructions
+
+  ------------------------------------------------------------------------
+
+Object of Game: Pilot your lander craft down onto the platforms and a
+colonist will run to you and get onboard. Take off and bring him back to the
+mothership safely. You can only carry one colonist at a time, so you need to
+make a complete round trip for each one. You start out with four lander
+vehicles. Continue saving colonists until you crash your last lander, at
+which time it's game over. If you fail to save at least one of the three
+colonists during one round (eg. they all die during your rescue efforts),
+it's also game over, regardless of how many landers you have in reserve.
+Consider your pilot's license revoked.
+
+Controls: Only the Reset button and the joystick are used. Start a new game
+by pressing the Reset button, then use the joystick to play. Launch the
+lander from the mothership by pressing the fire button. At that point
+gravity takes control and the ship will free fall. Press the fire button to
+overcome gravity and move upwards. Move the joystick left and right to move
+the lander in that direction. You can move diagonally upward by pressing the
+fire button and either left or right on the joystick at the same time. The
+effect of gravity will cause your ship to slow down and coast upward for a
+brief time after you stop pressing the fire button. Likewise, when falling
+it will not reach full speed immediately, but accelerates. It will take some
+practice for you to master control of the lander craft.
+
+The Screen: From the top to the bottom, here is a description of what's on
+the screen:
+
+     4 digit score
+
+     2 digit fuel guage
+
+     Mothership
+
+     Transition zone from outer atmosphere to orbital space
+
+     The outer atmosphere, populated by asteroids and enemy space craft
+
+     The inner atmosphere (or landing zone), consisting of three platforms,
+     each with a colonist at the beginning of a round
+
+     Status line, showing the ships remaining in the game, and the number of
+     colonists rescued so far in the current round
+
+Scoring: You receive points for each colonist you take on board. The
+colonist on the center (large) platform is worth 5 points. The left (medium)
+platform is worth 15 points. The right (small) platform is worth 50 points.
+At the end of each round, which lasts until all three colonists are either
+rescued or killed, you *may* receive several bonus scores. A 250 point
+perfect score bonus is awarded for returning all three colonists safely to
+the mother ship. You receive one point for each unit of fuel you have
+remaining at the end of the round. You also receive a bonus for each
+colonist safely returned to the mothership. This final bonus varies
+depending on the round you have just played:
+
+     round 1: 10 points per colonist
+
+     round 2: 20 "
+
+     round 3: 30 "
+
+     round 4: 40 "
+
+     round 5: 50 "
+
+     round 6 and above: 60 points per colonist
+
+You will receive three times the above bonus scores in addition to the 250
+point award for a perfect round.
+
+Playing Tips:
+
+     1. Don't touch any other flying objects. As the game progresses,
+     asteroids and enemy space ships move more quickly. Also watch out for
+     missiles fired by the enemy. They move laterally as they fall to the
+     planet surface, but they disintegrate when reaching the inner
+     atmosphere. Your lander as well as the colonists are safe from missiles
+     when in the landing zone.
+
+          Hint: The enemy craft shoot only one missile at a time. So, after
+          you are clear of a missile, but it is still visible, use this time
+          to navigate safely below other enemy ships you might ordinarily
+          avoid.
+
+     2. Don't land at full speed. Slow down before making contact with the
+     landing platform. This just takes practice.
+
+          Hint: You only crash when going maximum speed. Practice free
+          falling from various heights to get a feel for just how high you
+          can be and safely drop to a platform.
+
+     3. Don't touch the colonists while your craft is in the air, or they
+     will die. There is no telling which direction a colonist might run to
+     next, so you'll have to just try for the best position you can and hope
+     he doesn't run for your ship before you've actually landed! Ignore dead
+     colonists, as their twitching bodies are of no use to you.
+
+          Hint: If you are running low on fuel, but have rescued at least
+          one colonist, consider killing the last man and returning to the
+          mothership to complete the round and avoid the risk of losing a
+          ship to an out of fuel condition.
+
+     4. Don't try to land on the surface of the planet. It's molten and your
+     ship will explode. The three platforms are the only safe landing areas,
+     but you have to land directly on top of them. Touching them on the
+     sides will also crash your ship. You can safely land on a platform with
+     only one of the lander's feet touching, but you have to at least get
+     the main portion onto the platform. Barely touching it won't be good
+     enough.
+
+          Hint: The lander craft controls are pretty easy to adjust within
+          one pixel. Learn what a safe landing is by experimentally tapping
+          the lander left and right and landing right on the edge of a
+          platform.
+
+     5. Keep an eye on your fuel guage. When it hits zero, you lose a ship.
+     Fuel is consumed by either upward or sideways motion. Moving upward
+     consumes a bit more fuel than moving sideways and moving diagonally
+     upward consumes fuel fastest of all.
+
+          Hint: Obviously the less fuel you use the higher your score. Learn
+          to land and return as fuel efficiently as possible.
+
+     6. To dock with the mothership, fly up and try to get as close to the
+     center opening as you can. Once you leave the outer atmosphere, if you
+     are within the proper docking range, your lander will be pulled aboard.
+     If not, you crash.
+
+          Hint: One of the enemy space ships will never shoot at you. Can
+          you guess which one?

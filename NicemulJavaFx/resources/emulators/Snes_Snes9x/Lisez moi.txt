@@ -1,0 +1,18 @@
+Traduction Française de l'émulateur Snes9x 1.52 Fix 4
+par Benjamin Siskoo
+
+
+Mise à jour le 30 Janvier 2010
+
+
+CONTACT :
+---------
+
+Si vous trouvez des bugs dus à la traduction francaise par rapport à l'anglaise, des fautes d'orthographes ou de style, ou même remanié certaines expressions, écrivez-moi à :
+
+Siskoo@tradu-france.com 
+
+http://www.tradu-france.com/
+
+
+

@@ -1,0 +1,12 @@
+fix4:
+  -selecting "display messages before applying filters" prior to loading any rom could cause a crash
+  -hq4x and simple4x did not work correctly in DirectDraw and 32bit modes
+  -selecting filters with different scales for normal/hi-res modes caused incorrect message scaling
+  -the rom information window was always disabled
+fix3:
+  -avi recording crashed on < vista
+  -delete key mapping did not work after emulator restart
+fix2:
+  -parts of the window stopped updating when previously covered by other windows (only in d3d mode)
+fix1:
+  -display corruption in Super Metroid/Donkey Kong Country/... due to compiler optimization
