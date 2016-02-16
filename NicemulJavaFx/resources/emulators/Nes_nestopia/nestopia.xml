@@ -258,7 +258,7 @@
         </keys>
     </input>
     <language>
-        <file>C:\Users\prove_000\git\nicemulJavaFx\NicemulJavaFx\resources\emulators\Nes_nestopia\language\french.nlg</file>
+        <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources\emulators\Nes_nestopia\language\french.nlg</file>
     </language>
     <launcher>
         <search>
@@ -338,21 +338,21 @@
         </patches>
         <recent>
             <directories>
-                <directory>C:\Users\prove_000\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\</directory>
                 <directory>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\</directory>
+                <directory>C:\Users\prove_000\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\</directory>
                 <directory>C:\Users\5966941\Documents\sauvegardes\Perso\Nicemul\ressources/roms/nes\</directory>
                 <locked>no</locked>
             </directories>
             <files>
+                <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Solstice - The Quest for the Staff of Demnos (Europe).zip &lt;Solstice - The Quest for the Staff of Demnos (Europe).nes&gt;</file>
+                <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Snake Rattle N Roll (E).nes</file>
+                <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Super Mario Bros. + Duck Hunt (E) [!p].nes</file>
+                <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Super Mario Bros - Ninja Turtles (SMB1 Hack).nes</file>
                 <file>C:\Users\prove_000\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Teenage Mutant Hero Turtles (E) [!p].nes</file>
                 <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Adventures of Bayou Billy, The (E) [!].zip &lt;Adventures of Bayou Billy, The (E) [!].nes&gt;</file>
-                <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Super Mario Bros. + Duck Hunt (E) [!p].nes</file>
                 <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Life Force (E) [!].nes</file>
                 <file>C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources/roms/nes\Teenage Mutant Hero Turtles (E) [!p].nes</file>
                 <file>C:\Users\5966941\Documents\sauvegardes\Perso\Nicemul\ressources/roms/nes\Super Mario Bros - Ninja Turtles (SMB1 Hack).nes</file>
-                <file>C:\Users\5966941\Documents\sauvegardes\Perso\Nicemul\ressources/roms/nes\Super Mario Bros. + Duck Hunt (E) [!p].nes</file>
-                <file>C:\Users\5966941\Documents\sauvegardes\Perso\Nicemul\ressources/roms/nes\Snake Rattle N Roll (E).nes</file>
-                <file>C:\Users\5966941\Documents\sauvegardes\Perso\Nicemul\ressources/roms/nes\Life Force (E) [!].nes</file>
                 <locked>no</locked>
             </files>
         </recent>
@@ -486,7 +486,7 @@
             </ry>
             <yellow-boost>no</yellow-boost>
         </decoder>
-        <device>D7B71EE2-DA4E-11CF-7F77-1D0BBEC2C535</device>
+        <device>D7B78E66-4752-11CF-8E78-9510BBC2C435</device>
         <filters>
             <2xsai>
                 <bilinear>no</bilinear>

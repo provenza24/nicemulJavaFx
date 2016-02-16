@@ -1,0 +1,8 @@
+Reading config file C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources\emulators\Snes_Snes9x/snes9x.conf.
+Saving	config file	C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources\emulators\Snes_Snes9x/snes9x.conf
+Sound buffer size: 8192 (2048 samples)
+No ROM file header found.
+Map_LoROMMap
+"the adv.of BATMAN&ROB0" [bad checksum] LoROM, 16Mbits, ROM, PAL, SRAM:0Kbits, ID:ABTP, CRC32:3DEF3D7E
+Sound buffer size: 8192 (2048 samples)
+Saving	config file	C:\travail\git\nicemulJavaFx\NicemulJavaFx\resources\emulators\Snes_Snes9x/snes9x.conf

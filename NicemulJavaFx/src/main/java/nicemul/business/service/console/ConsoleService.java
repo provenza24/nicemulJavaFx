@@ -38,12 +38,7 @@ public class ConsoleService implements IConsoleService {
 	public ConsoleService() {
 	}
 
-	public List<Rom> findConsoleRoms(String consoleName) throws BusinessException {
-		/*List<Rom> romList = consoleRepository.findRoms(consoleName);
-		for (Rom rom : romList) {
-			Hibernate.initialize(rom.getConsole());
-			Hibernate.initialize(rom.getConsole().getEmulators());
-		}*/
+	public List<Rom> findConsoleRoms(String consoleName) throws BusinessException {		
 		return consoleRepository.findRoms(consoleName);
 	}
 	
@@ -306,8 +301,11 @@ public class ConsoleService implements IConsoleService {
         String consoleNames[] = emulatedConsolesProp.split(";");
         for (String consoleName : consoleNames) {
             Console console = consoleRepository.findByName(consoleName);
-            if (console!=null) {
+            if (console!=null) {            	
             	console.addEmulator(emulator);
+            	if (console.getDefaultEmulator()==null) {
+            		console.setDefaultEmulator(emulator);
+            	}
             }            
         }
         
