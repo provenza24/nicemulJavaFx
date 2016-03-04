@@ -56,7 +56,7 @@ public class Console implements Serializable {
 
 	@Column(name = "MINI_ICON")
 	private String miniIcon;
-	
+
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "console", orphanRemoval = true)
 	public List<Rom> roms;
 	
@@ -144,7 +144,7 @@ public class Console implements Serializable {
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
-		
+
 	public List<Rom> getRoms() {
 		return roms;
 	}

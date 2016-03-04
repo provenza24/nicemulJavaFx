@@ -4,9 +4,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Service;
 
-@Service
+
 public class ApplicationContextHolder implements ApplicationContextAware {
 
     private static ClassPathXmlApplicationContext xmlAppContext;
