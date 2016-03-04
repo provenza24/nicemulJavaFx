@@ -13,6 +13,9 @@ var AppAngulardesign = angular.module('Angulardesign',
       }).when('/consoles', {
     	  templateUrl:'views/consoles.htm', 
     	  controller:'consoleCtrl'
+      }).when('/consoles/:id/roms', {
+    	  templateUrl:'views/console-roms.html', 
+    	  controller:'consoleRomsCtrl'
       }).
       otherwise({redirectTo: '/home'});
 }]).config(['$httpProvider', function($httpProvider) {    

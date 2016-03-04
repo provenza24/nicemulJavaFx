@@ -18,9 +18,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "CONSOLE")
 @SequenceGenerator(name = "CONSOLE_SEQ", sequenceName = "CONSOLE_SEQ", allocationSize = 1)
+@JsonIgnoreProperties({"roms","defaultEmulator","emulators"})
 public class Console implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -144,7 +147,7 @@ public class Console implements Serializable {
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
-
+	
 	public List<Rom> getRoms() {
 		return roms;
 	}

@@ -1,0 +1,58 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title font-bold" style="display: inline-block">
+						<img
+							style="vertical-align: middle; margin: 0 10px 0 0; width: 24px"
+							src="images/consoles/mini-icons/%CONSOLE_ICON%" alt="home" /> <span
+							class="LLPIXEL3">LISTE DES JEUX</span>
+					</h3>
+				</div>
+
+				<div class="panel-body" style="height: 440px; overflow: auto">
+					<div class="row" id="gamelistdetail" ng-repeat="rom in roms">
+
+						<div class="col-sm-3" style="margin-bottom: 0px">
+							<img style="margin-top: 5px" class="thumbnail" width="100px"
+								ng-src="{{rom.coverName}}" />
+						</div>
+
+						<div class="col-sm-8"
+							style="margin-top: 8px; margin-bottom: 0px; margin-left: -15px">
+
+							<p style="margin-bottom: 0px">
+								<span class="%CONSOLE_CLASS%">{{rom.formatedName}}</span>
+							</p>
+
+							<div id="gameLineDetail">
+								<p>Genre: &nbsp;</p>
+								<p></p>
+							</div>
+
+							<div id="gameLineDetail" ng-show="game.year!=0">
+								<p>Date de sortie: &nbsp;</p>
+								<p></p>
+							</div>
+
+							<div id="gameLineDetail" ng-show="game.editor">
+								<p>Région: &nbsp;</p>
+								<p>
+									<img src="images/icones/%FLAG_ICON%" />
+								</p>
+							</div>
+
+						</div>
+						<!-- TODO Margin bottom = 0 for SNES -->
+						<div class="col-sm-1" style="margin-bottom: 0px">
+							<img style="margin-top: 45px; margin-left: -30px" width="80px"
+								src="images/consoles/icons/%CONSOLE_ICON%" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

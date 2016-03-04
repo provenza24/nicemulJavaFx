@@ -158,7 +158,7 @@ public class ConsoleService implements IConsoleService {
 			if (console.getRoms() != null) {
 				List<Rom> romsToDelete = new ArrayList<Rom>();
 				for (Rom rom : console.getRoms()) {
-					File f = new File(romFolder + File.separatorChar + rom.getName());
+					File f = new File(System.getProperty("user.home") + File.separatorChar + romFolder + File.separatorChar + rom.getName());
 					if (!f.exists()) {
 						romsToDelete.add(rom);
 					}
@@ -169,7 +169,7 @@ public class ConsoleService implements IConsoleService {
 			}
 
 			// Scan the roms folder of the console and add roms not present in DB
-			String[] romFiles = new File(romFolder).list();
+			String[] romFiles = new File(System.getProperty("user.home") + File.separatorChar + romFolder).list();
 			if (romFiles != null) {
 				for (int j = 0; j < romFiles.length; j++) {
 					String romName = romFiles[j];
