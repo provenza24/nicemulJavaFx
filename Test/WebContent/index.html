@@ -2,173 +2,58 @@
 <html ng-app="Angulardesign" ng-controller="globalCtrl">
 <head>
 
-<title>Nicemul</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<title>My Web App</title>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/game-search.css">
-<link rel="stylesheet" href="css/font.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/dock.css">
-<link rel="stylesheet" href="css/menu.css">
 
-<script src="js/libs/modernizr-1.5.min.js"></script>	  
+<script src="js/libs/modernizr-1.5.min.js"></script>
 <script src="js/libs/angular-1.2.26.min.js"></script>
 <script src="js/libs/angular-route-1.2.13.js"></script>
 <script src="js/libs/angular-resource-1.2.13.js"></script>
 <script src="js/libs/jquery-1.11.1.min.js"></script>
-<script src="js/libs/bootstrap.min.js"></script>	
-<script src="js/libs/ui-bootstrap-0.5.0.js"></script>		
-<script src="js/libs/ui-bootstrap-tpls-0.4.0.js"></script>	
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/ui-bootstrap-0.5.0.js"></script>
+<script src="js/libs/ui-bootstrap-tpls-0.4.0.js"></script>
 
 
 <script src="js/application.js"></script>
 <script src="js/services.js"></script>
 <script src="js/directives.js"></script>
-<script src="js/controllers/global_controller.js"></script>  
-<script src="js/controllers/console_controller.js"></script>
-
+<script src="js/controllers/global_controller.js"></script>
+<script src="js/controllers/user_controller.js"></script>
 
 </head>
 
 <body>
 
-	<div id="header"></div>
-
-	<div class="dock" id="dock" style="z-index: 10">
-		<div class="dock-container">
-			<a class="dock-item" ng-href="#/consoles/NES/roms"><img src="images/consoles/dock/NES.png"><span></span></a>
-			<a class="dock-item" ng-href="#/consoles/SNES/roms"><img src="images/consoles/dock/SNES.png"><span></span></a> 
-			<a class="dock-item" ng-href="#/consoles/GAMEBOY/roms"><img src="images/consoles/dock/GAMEBOY.png"><span></span></a> 
-			<a class="dock-item" ng-href="#/consoles/MEGADRIVE/roms"><img src="images/consoles/dock/MEGADRIVE.png"><span></span></a>
-			<a class="dock-item" href="#" id="c-button--slide-right-consoles-menu"><img src="images/consoles/dock/consoles.png"><span></span></a>			
-			<a class="dock-item" href="#"><span></span></a>
-			<a class="dock-item" href="#"><span></span></a> 					
-			<a class="dock-item" href="#" onclick="java.changePage('HOME', '');"><img src="images/icones/home.png"><span></span></a> 
-			<a class="dock-item" href="#" id="c-button--slide-right-search"><img src="images/icones/search.png"><span></span></a>
-			<a class="dock-item" href="#" href="#"><img src="images/icones/config.png"><span></span></a>
-			
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">My Web App</a>
 		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#">HOME</a></li>
+			<li><a href="#/users">USERS</a></li>
+		</ul>
 	</div>
+	</nav>
 
 	<div class="col-sm-12" style="margin-top: 20px">
 		<div id="o-wrapper" class="o-wrapper">
 
 			<main class="o-content">
-				<div class="o-container">	
-					<div id="mainView">					
+			<div class="o-container">
+				<div id="mainView">
 					<div class="container-fluid">
-						<div ng-view></div>				
-					</div>	
+						<div ng-view></div>
+					</div>
 				</div>
 			</main>
-			
+
 		</div>
-		<!-- /o-wrapper -->		
-		<nav id="c-menu--slide-right-consoles-menu" class="c-menu c-menu--slide-right-consoles-menu cbp-spmenu cbp-spmenu-vertical">			
-			<!--h3> 				
-				<span class="LLPIXEL3">CONSOLES</span>
-			</h3-->
-			<div class="c-menu__close">				
-  				<a href="#" onclick="java.changePage('CONSOLE_ROMS', 'NES');"><img src="images/consoles/logo/NES.png"></a>
-	  			<a href="#" onclick="java.changePage('CONSOLE_ROMS', 'SNES');"><img src="images/consoles/logo/SNES.png"></a>
-  				<a href="#" onclick="java.changePage('CONSOLE_ROMS', 'GAMEBOY');"><img src="images/consoles/logo/GAMEBOY.png"></a>
-  				<a href="#" onclick="java.changePage('CONSOLE_ROMS', 'MEGADRIVE');"><img src="images/consoles/logo/MEGADRIVE.png"></a>
-  				<a href="#" onclick="java.changePage('CONSOLE_ROMS', 'ATARI_2600');">ATARI 2600</a>  				
-  			</div>								
-		</nav>
-
-
-		<nav id="c-menu--slide-right-search" class="c-menu c-menu--slide-right-search">
-		<button class="c-menu__close">Close Menu &rarr;</button>
-
-		<form role="form" name="gameSearchForm">
-
-			<div class="gamesearchform">
-
-				<select>
-					<option value="">-- Tous les genres --</option>
-				</select> <br /> <select ng-model="filter.console" ng-options="console.name for console in consoles" data-image="images/consoles/{{console.background}}" ng-change="searchGames(filter, true)">
-					<option value="">-- Toutes les consoles --</option>
-				</select> <br /> <input ng-model="filter.title" type="text" placeholder="Filtre par titre" autofocus> <br /> <input class="hidden-xs" ng-model="filter.year" type="text"
-					placeholder="Filtre par année" autofocus> <br /> <input class="hidden-xs" ng-model="filter.other" type="text" placeholder="Filtre par éditeur / développeur" autofocus>
-
-				<!--br/>
-							
-							<input ng-model="filter.developer" type="text" placeholder="Filtre par développeur" autofocus-->
-
-				<br />
-
-				<button ng-click="searchGames(filter, true)" class="btn btn-primary">Chercher</button>
-
-				<button ng-click="initFilter()" class="btn btn-warning">Réinitialiser</button>
-
-			</div>
-		</form>
-
-		</nav>
-		<!-- /c-menu slide-right-search -->
-
-
-		<div id="c-mask" class="c-mask"></div>
-		<!-- /c-mask -->
-
-	</div>
-
-	<!-- DOCK MENU -->
-	<script type="text/javascript" src="js/iutil.js"></script>
-	<script type="text/javascript" src="js/fisheye.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#dock').Fisheye({
-				maxWidth : 60,
-				items : 'a',
-				itemsText : 'span',
-				container : '.dock-container',
-				itemWidth : 60,
-				proximity : 90,
-				halign : 'center'
-			})
-		});
-	</script>
-
-	<!-- LEFT SLIDING MENUS -->
-	<script src="js/menu.js"></script>
-	<script>
-		/**
-		 * Slide right instantiation and action.
-		 */
-		var slideRightSearch = new Menu({
-			wrapper : '#o-wrapper',
-			type : 'slide-right-search',
-			menuOpenerClass : '.c-button',
-			maskId : '#c-mask'
-		});
-
-		var slideRightSearchBtn = document.querySelector('#c-button--slide-right-search');
-
-		slideRightSearchBtn.addEventListener('click', function(e) {
-			e.preventDefault;
-			slideRightSearch.open();
-		});
-		
-		/**
-		 * Slide right instantiation and action.
-		 */
-		var slideRightConsolesMenu = new Menu({
-			wrapper : '#o-wrapper',
-			type : 'slide-right-consoles-menu',
-			menuOpenerClass : '.c-button',
-			maskId : '#c-mask'
-		});
-
-		var slideRightConsolesMenuBtn = document.querySelector('#c-button--slide-right-consoles-menu');
-
-		slideRightConsolesMenuBtn.addEventListener('click', function(e) {
-			e.preventDefault;
-			slideRightConsolesMenu.open();
-		});
-		
-	</script>
-
+		<!-- /o-wrapper -->
 </body>
 </html>

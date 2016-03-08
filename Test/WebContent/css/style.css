@@ -144,48 +144,16 @@ hr {
   color: #c2e1f2;
 }
 
-/**************************************/
-/* ICONS                              */
-/**************************************/ 
-
-
-.NES_ICONE {
-	background-image:url(../images/consoles/nes.png);
+tr {
+	background-color : #fff;
 }
 
-.SNES_ICONE {
-	background-image:url(../images/consoles/snes.png);
+tr:hover {
+	background-color : #DEEBF2;
 }
 
-.MEGADRIVE_ICONE {
-	background-image:url(../images/consoles/megadrive.png);
-}
 
-.AMIGA_ICONE {
-	background-image:url(../images/consoles/amiga.png);
+thead tr {
+	background-color : #5A71D1;
+	color: #fff;
 }
-
-.PC_ICONE {
-	background-image:url(../images/consoles/pc.png);
-}
-
-.GAMEBOY_ICONE {
-	background-image:url(../images/consoles/gameboy.png);
-}
-
-.NEOGEO_ICONE {
-	background-image:url(../images/consoles/neogeo.png);
-}
-
-.ATARI_ST_ICONE {
-	background-image:url(../images/consoles/atari.png);
-}
-
-.ATARI_2600_ICONE {
-	background-image:url(../images/consoles/atari_2600.png);
-}
-
-.GAMEBOY_ADVANCE_ICONE {
-	background-image:url(../images/consoles/advance.png);
-}
-

@@ -3,19 +3,16 @@ var AppAngulardesign = angular.module('Angulardesign',
 		'ngRoute',		
 		'Angulardesign.Services',
 		'Angulardesign.Controllers.Global_controller',
-		'Angulardesign.Controllers.Console_controller'
+		'Angulardesign.Controllers.User_controller'
 		])
    .config(['$routeProvider', function($routeProvider) {
    $routeProvider.
    	  when('/home', {
     	  templateUrl:'views/home.htm', 
     	  controller:'globalCtrl'
-      }).when('/consoles', {
-    	  templateUrl:'views/consoles.htm', 
-    	  controller:'consoleCtrl'
-      }).when('/consoles/:id/roms', {
-    	  templateUrl:'views/console-roms.html', 
-    	  controller:'consoleRomsCtrl'
+      }).when('/users', {
+    	  templateUrl:'views/users.htm', 
+    	  controller:'userCtrl'
       }).
       otherwise({redirectTo: '/home'});
 }]).config(['$httpProvider', function($httpProvider) {    
